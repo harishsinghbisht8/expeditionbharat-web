@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const nodeExternals = require("webpack-node-externals");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -66,6 +67,9 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(["*.*"], {
+      root: path.resolve(__dirname, "../compiled")
+    }),
     new ExtractTextPlugin({
       filename: "eb.[name].css"
     })
