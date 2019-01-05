@@ -1,1 +1,1 @@
-web: node main.js
+web: yarn install; yarn start
