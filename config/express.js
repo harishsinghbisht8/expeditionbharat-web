@@ -20,10 +20,10 @@ var errorPageController = require("../app_react/controllers/errorPageController"
 var fileController = require("../app_react/controllers/fileController");
 var env = process.env.NODE_ENV || 'dev';
 var commonFilesHashes={
-  runtime: 'ui.runtime.' + parseInt(Math.random()*10000000) + '.js',
-  common: 'ui.common.' + parseInt(Math.random()*10000000) + '.js',
-  app: 'ui.app.' + parseInt(Math.random()*10000000) + '.js',
-  polyfill: 'ui.polyfill.' + parseInt(Math.random()*10000000) + '.js'
+  runtime: 'eb.runtime.' + parseInt(Math.random()*10000000) + '.js',
+  common: 'eb.common.' + parseInt(Math.random()*10000000) + '.js',
+  app: 'eb.app.' + parseInt(Math.random()*10000000) + '.js',
+  polyfill: 'eb.polyfill.' + parseInt(Math.random()*10000000) + '.js'
 };
 
 var isSecure = function(req) {
@@ -67,7 +67,7 @@ module.exports = function (app, config, router) {
 
   if(!process.env.NODE_TEST) {
 
-      if(env == "build") {
+      if(env == "dev") {
           app.use(expressWinston.logger({
               transports: [
                   new winston.transports.Console({
@@ -117,7 +117,7 @@ module.exports = function (app, config, router) {
   app.use(fileController.middleware);
   
   if(!process.env.NODE_TEST) {
-      if(env == "build") {
+      if(env == "dev") {
           app.use(expressWinston.errorLogger({
               transports: [
                   new winston.transports.Console({
