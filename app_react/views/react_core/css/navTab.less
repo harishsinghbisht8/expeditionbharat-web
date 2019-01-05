@@ -1,0 +1,37 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+@navPadding: 13px 24px; /* Accounted for 3px border. Total is 16px according to the style guide */
+@borderWidth : 3px;
+@hoverBorder : solid @borderWidth @brandClr;
+
+
+
+.nav-list-item {
+	font-size: @defaultFontSize;
+	font-weight: @semiBold;
+	letter-spacing: @textLetterSpacing;
+	color: @tertiaryTextClr;
+    padding: @navPadding;
+    cursor:pointer;	
+    border-bottom: solid @borderWidth transparent;
+	&:hover, &.selected {
+		color: @secondaryTextClr;
+	}
+}
+
+
+.nav-list{
+	.nav-list-item {
+		&.selected {
+			border-bottom: @hoverBorder;
+			color: @brandClr;
+		}
+	}
+}
+.nav-item-tooltip{
+	width: 200px;
+	z-index: 10;
+}

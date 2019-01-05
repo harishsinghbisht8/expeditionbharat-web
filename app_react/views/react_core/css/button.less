@@ -1,0 +1,116 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.c-btn {
+	background-color: @ctaClr;
+	color: #FFF;
+	padding: 10px 14px;
+	height: 40px;
+	border-radius: 2px;
+	border: none;
+	width: 100%;
+	box-shadow: 1px 1px 3px @shadowClr;
+	position: relative;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		color: #FFF;
+	}
+
+	&.disabled {
+		background-color: @ctaDisabledClr;
+		cursor: default;
+		color: @disabledTextClr;
+	}
+
+	&.secondary {
+		background-color: #FFF;
+		color: @ctaClr;
+		border: 1px solid @ctaClr;
+		box-shadow: none;
+
+		&:hover {
+			color: #FFF;
+			background-color: @ctaClr;
+		}
+	}
+
+	.button-icon{
+		&.left{
+			float: left;
+		}
+		&.right{
+			float: right;
+		}
+	}
+
+	.u-ripple {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  overflow: hidden;
+	  background: transparent;
+
+	  &.is-active .u-ripple-circle {
+	  	animation: ripple .35s ease-in;
+		-webkit-animation: ripple .35s ease-in;
+	  }
+	}
+
+	.u-ripple-circle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, .45);
+	}
+
+	/**
+	 * Animation: Ripple
+	 * --------------------------------------------------
+	 */
+
+	@keyframes ripple {
+		0% {
+			opacity: 0;
+		}
+		25% {
+			opacity: 1;
+		}
+		100% {
+			width: 200%;
+			padding-bottom: 200%;
+			opacity: 0;
+		}
+	}
+	@-webkit-keyframes ripple {
+		0% {
+			opacity: 0;
+		}
+		25% {
+			opacity: 1;
+		}
+		100% {
+			width: 200%;
+			padding-bottom: 200%;
+			opacity: 0;
+		}
+	}
+}

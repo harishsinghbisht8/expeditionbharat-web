@@ -1,0 +1,44 @@
+
+@import (reference) "base.less";
+@import (reference) "grid.less";
+@import (reference) "text.less";
+
+.c-popup {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+
+    &.dark {
+        background: rgba(0,0,0,0.9);
+    }
+
+    .popup-content {
+		border-radius: 4px;
+    	padding: 20px;
+	    background: @white;
+	    left: 50%;
+	    top: 50%;
+	    position: fixed;
+	    -ms-transform: translate(-50%, -50%);
+	    -webkit-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+
+	    &.no-padding {
+	    	padding: 0;
+	    }
+
+    	.close-popup {
+            position: absolute;
+            right: 8px;
+            top: 5px;
+            color: @primaryTextClr;
+            font-size: @smallFontSize;
+            cursor: pointer;
+            z-index: 1;
+        }
+    }
+}

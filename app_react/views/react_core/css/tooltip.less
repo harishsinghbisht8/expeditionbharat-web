@@ -1,0 +1,110 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.u-tooltip-wrapper {
+	position: relative;
+	&:hover {
+		.c-tooltip {
+			display: block;
+		}
+	}
+}
+
+.c-tooltip {
+	display: none;
+	background-color: @tooltipBgColor;
+	color: @white;
+	padding: 6px;
+	border-radius: 2px;
+	font-size: @smallFontSize;
+	position: absolute;
+	text-align: center;
+
+	&.left {
+		top: 50%;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+
+		right: 110%;
+		right: ~"calc(100% + 10px)";
+		right: ~"-webkit-calc(100% + 10px)";
+		right: ~"-moz-calc(100% + 10px)";
+	}
+
+	&.right {
+		top: 50%;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+
+		left: 110%;
+		left: ~"calc(100% + 10px)";
+		left: ~"-webkit-calc(100% + 10px)";
+		left: ~"-moz-calc(100% + 10px)";
+
+		.tip {
+			position: absolute!important;
+			top: ~"calc(50% - 8px)"; 
+			top: ~"-webkit-calc(50% - 8px)";
+			top: ~"-moz-calc(50% - 8px)";
+			left: -19px;
+			width: 27px;
+			height: 12px;
+			overflow: hidden;
+			transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
+			&:after {
+				content: "";
+				position: absolute!important;
+				top: 5px;
+				left: 5px;
+				width: 14px;
+				height: 14px;
+				background: @tooltipBgColor;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(-45deg);
+			}
+		}
+	}
+
+	&.bottom {
+		left: 50%;
+		transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+
+		top: 110%;
+		top: ~"calc(100% + 10px)";
+		top: ~"-webkit-calc(100% + 10px)";
+		top: ~"-moz-calc(100% + 10px)";
+
+		.tip {
+			border-bottom: 8px solid @tooltipBgColor;
+			border-right: 10px solid transparent;
+			border-left: 10px solid transparent;
+			border-top: 0;
+			content: " ";
+			display: block;
+			position: absolute;
+			top: -6px;
+			left: ~"calc(50% - 20px)";
+			left: ~"-webkit-calc(50% - 20px)";
+			left: ~"-moz-calc(50% - 20px)";
+		}
+	}
+
+	&.top {
+		left: 50%;
+		transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+
+		bottom: 110%;
+		bottom: ~"calc(100% + 10px)";
+		bottom: ~"-webkit-calc(100% + 10px)";
+		bottom: ~"-moz-calc(100% + 10px)";
+	}
+}

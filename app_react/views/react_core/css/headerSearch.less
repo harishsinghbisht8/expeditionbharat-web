@@ -1,0 +1,45 @@
+
+@import (reference) "base.less";
+@import (reference) "grid.less";
+@import (reference) "text.less";
+
+.header{
+	.header-search {
+	    .u-pos-abs;
+	    top: 0;
+	    right: 110px;
+	    left: 110px;
+	    bottom: 0;
+	    border-bottom: 3px solid @ctaClr;
+	    z-index: 2;
+	    input{
+	    	height: 100%;
+	    	padding-left: 12px;
+	    	font-size: 25px!important;
+	    	font-weight: @light;
+	    }
+	    .autocompleter-results.u-box {
+	        .u-text-left;
+	    }
+	    .c-auto-cmpltr {
+	        height: 100%;
+	        .c-input-cntr {
+		        height : 100%;
+		    }
+	    }
+	}
+	.search-icon {
+	    .u-ib;
+	    border: 1px solid #fff;
+	    height: 30px;
+	    width: 30px;
+	    border-radius: 50%;
+	    cursor: pointer;
+	}
+
+	.right-nav{
+		.u-v-align-middle;
+		padding-left: 15px;
+		line-height: 1;
+	}
+}

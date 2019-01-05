@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include ./meta.ejs %>
+
+		<script type="text/javascript">
+			if(typeof Object.assign != 'function' || typeof window.Promise == 'undefined' || typeof ''.includes != 'function') {
+				var el = document.createElement('script');
+			    el.src = "/js/dist/<%- commonFilesHashes.polyfill %>";
+			    el.type= "text/javascript";
+			    document.head.appendChild(el);
+			}
+		</script>
+
+		<style>
+			PAGE_STYLES
+		</style>
+
+		<style>
+			#offlineMsg {
+				display: none;
+			}
+
+			body.offline #offlineMsg {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="offlineMsg"><span class="ixi-icon-switch"></span>You are offline</div>
+		<div id="contentWrpr">
+			<div id="content">
+				<%- html%>
+			</div>
+		</div>
+
+		<%- include ./body.ejs %>
+
+		<script type="text/javascript" src="/js/dist/<%- commonFilesHashes.runtime %>"></script>
+		<script type="text/javascript" src="/js/dist/<%- commonFilesHashes.common %>"></script>
+        <script type="text/javascript" src="/js/dist/<%- commonFilesHashes.app %>"></script>
+	</body>
+</html>

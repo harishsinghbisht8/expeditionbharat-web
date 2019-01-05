@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log
+public/js/dist/
+public/css/
+compiled/
+.idea/
+app_react/views/common/templates/*_compiled.ejs
+**/.DS_Store
+.DS_Store
+npm-debug.log.*
+yarn-error.log
+service-worker-nm.*

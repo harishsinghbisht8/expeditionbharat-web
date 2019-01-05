@@ -1,0 +1,124 @@
+
+/* Colors */
+
+@white : #FFF;
+@black : #000;
+
+@linkClr : #1FB0DE;
+
+@ctaClr : #011275;
+@ctaHoverClr : #011275;
+@ctaDisabledClr : #E1E1E1;
+@ctaLetterSpacing : 0.3px;
+@textLetterSpacing : 0.5px;
+
+@tooltipBgColor: #000;
+
+@brandClr: #011275; /* Shade of orange */
+@brandClr2: #550F5D; /* Shade of purple */
+@brandClr3: #550F5D; /* Lighter Shade of purple */
+@brandClr4: #3A1248; /* Lighter Shade of purple */
+@brandClr5: #2E013D; /* Lighter Shade of purple */
+
+/* Default Txt clr and its Shades */
+@primaryTextClr : rgba(0,0,0,0.87); // For First level of information
+@secondaryTextClr : rgba(0,0,0,0.64); // For Secondary level of information
+@tertiaryTextClr : rgba(0,0,0,0.38); // For Tertiary level of information
+@disabledTextClr : #C5C5C5;
+@disabledBgClr : #F0F0F0;
+@secondaryTextClr2 : #898380;
+@secondaryTextClr3 : rgba(0,0,0,0.5);
+@starClr:#EFAD00;
+@highlightClr:#3b8e1b;
+@tagBgClr:#f6f6f6;
+@tagBrdrClr:#f0eeee;
+@imageBgGradient:linear-gradient(to bottom,#545454,#212122);
+@ratingClr:#00a680;
+@ratingGrpBgClr:#f5f5f5;
+@imgCarouselActnClr:#d0d0d0;
+@whyThisHotelClr1:#3b8e1b;
+@whyThisHotelClr2:#d75a4a;
+@whyThisHotelClr3:#1eb0de;
+@whyThisHotelIcBgClr:#EDEDED;
+@nearbyTabsBgClr:#f0f0f0;
+@nearbyPlacesActiveClr:#F6F7F7;
+@roomTypesBgClr:rgba(182, 181, 181, 0.26);
+@roomTypesSelProviderBgClr:#F6F7F7;
+@calendarBrdrClr:rgba(1,18,117,1);
+@calendarSlctnClr:rgba(1,18,117,0.12);
+@switchClrShde:rgba(1,18,117,.7);;
+@switchClr:#011275;
+@errorAcBg:#fff;
+@providerHvrClr:rgba(1,18,117, 0.1);
+
+@shadowClr: rgba(0,0,0,0.3);
+@cardShadow: 0 0 5px rgba(0,0,0,.15);
+@openCardShadow:  0 0 10px rgba(0,0,0,.20);
+
+@alternateRowClr: #f3f3f3;
+@tableHeaderColor: rgba(1,18,117,0.2);;
+
+
+@borderClr : rgba(0,0,0,0.12);
+@borderClrFocus : #f68b1f;
+
+@fbBgClr: #3a5e95;
+@gpBgClr: #eb4225;
+@twtrBgClr: #55acee;
+@whtsappBgClr: #28A619;
+@sectionHeaderbgClr : rgba(1,18,117,0.2);
+@sectionHeaderClr : rgba(1,18,117,0.87);
+@breadcrumbActiveClr:#20AEDB;
+@backgroundClr : #F5F5F5;
+@tpClr:#00a680;
+
+@errorClr: #D50000;
+@errorBgClr: rgba(255,0,0,0.1);
+@successClr: #2E8D12;
+@neutralColor: #E08E07;
+
+@defaultHoverClr : #f4f4f4;
+
+@inputFocusClr : rgba(1,18,117,0.1);
+
+@disclaimerBgClr : #FFFCD8;
+
+@borderGreen : #83BE40;
+
+/* Font Variables */
+@xSmallFontSize: 10px;
+@smallFontSize : 12px;
+@defaultFontSize : 14px;
+@largeFontSize : 16px;
+@midLargeFontSize : 18px;
+@xlargeFontSize : 20px;
+@xxLargeFontSize : 24px;
+@xxxLargeFontSize:28px;
+@superLargeSize : 32px; /*Its huge*/
+
+/* Font Weight */
+@light:300;
+@normal: 400;
+@semiBold: 600;
+@bold: 800;
+
+
+
+/* transitions*/
+@transitionDuration : 0.3s;
+
+
+/*mixins*/
+
+.brandClrOpacity(@opa) {
+	@lightBrandClr: rgba(1,18,117, @opa);
+} /* Lighter Shade of orange */
+
+.calcWidth(@expression) {
+	width: -moz-calc(@expression);
+	width: -o-calc(@expression);
+	width: -webkit-calc(@expression);
+	width: calc(@expression);
+}
+
+/*mixins end*/

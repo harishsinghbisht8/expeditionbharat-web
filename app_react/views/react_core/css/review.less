@@ -1,0 +1,33 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.c-review{
+	width: 100%;
+	padding: 0 5%;
+	.u-text-center;
+	.u-v-align-top;
+
+	.c-review-text{
+		font-size: @defaultFontSize;
+		white-space: initial;
+		color : @secondaryTextClr;
+
+		.c-quote{
+			transform : scale(2);
+			margin : 0 10px;
+			.u-ib;	
+		}
+	}
+	.c-review-user {
+		font-size: 18px;
+		margin: 10px 0 5px;
+		font-weight: @semiBold;
+	}
+	.c-review-rating {
+		.c-review-star{
+			margin-right : 5px;
+		}
+	}
+}

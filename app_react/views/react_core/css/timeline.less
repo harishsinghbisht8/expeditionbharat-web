@@ -1,0 +1,46 @@
+
+@import (reference) "base.less";
+@import (reference) "text.less";
+
+
+.c-timeline-wrapper{
+
+	&.horizontal{
+		.u-text-center;
+		font-size: 0px;
+		width: 100%;
+
+		.label{
+			position:relative;
+		    display: inline-block;
+		    min-width: 1px;
+
+		    &.tl, &.br{
+		    	&.first{
+		    		transform: translateX(-45%);
+		    	}
+		    	&.last{
+		    		transform: translateX(45%);
+		    	}
+		    }
+		}
+
+		.c-timeline{
+	    	display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+	    	font-size: 0;
+	    	width: 100%;
+	    	margin: 10px 0px;
+
+			.dot{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+

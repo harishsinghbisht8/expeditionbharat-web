@@ -1,0 +1,60 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+@ddBackground : #FAFAFA;
+@ddPadding : 5px 20px;
+
+
+
+.dropdown-list {
+	position: absolute;
+	z-index: 10;
+	background-color: @ddBackground;
+	padding: 0;
+	letter-spacing: @textLetterSpacing;
+	font-size: @defaultFontSize;
+
+	-webkit-transition: display 0.2s;
+    transition: display 0.2s;
+
+	.dropdown-list-item {
+		.u-nostyle-link;
+		.u-ib;
+		color: @primaryTextClr;
+		padding: @ddPadding;
+		width: 100%;
+		cursor : pointer;
+		border-left: solid 3px transparent;
+
+		&:hover, &.selected {
+			border-left: solid 3px @brandClr;
+			background: @defaultHoverClr;
+		}
+
+		&.disabled {
+			color : @disabledTextClr !important;
+			cursor : default;
+
+			&:hover {
+				border-left: solid 3px transparent !important;
+				background: transparent !important;
+			}
+		}
+	}
+}
+
+.dd-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 6px solid @tertiaryTextClr;
+
+	&.up {
+    	border-bottom: 6px solid @tertiaryTextClr;
+    	border-top: none;
+	}
+}

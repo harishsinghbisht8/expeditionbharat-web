@@ -1,0 +1,48 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.c-switch{
+  display: inline-block;
+  width: 36px;
+  height: 15px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+
+  .switch-handle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    -webkit-transition: 0.3s ease-out left;
+    -moz-transition: 0.3s ease-out left;
+    -o-transition: 0.3s ease-out left;
+    transition: 0.3s ease-out left;
+  }
+
+  &.switch-on{
+    background-color: @switchClrShde; // TODO brand color shade
+    .switch-handle{
+      background-color: @switchClr; // TODO brand color
+      left:16px;
+    }
+  }
+
+  &.switch-off{
+    background-color: #c6c5c5; // TODO color variable
+    .switch-handle{
+      background-color: #f1f1f1; // TODO color variable
+      left:0;
+      border: 1px solid #c6c5c5;
+    }
+  }
+
+  &.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

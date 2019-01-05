@@ -1,0 +1,38 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.c-pagination {
+
+    .nav, .page-num {
+      padding: 5px 0;
+      width: 23px;
+      margin: 0 5px;
+      color: @brandClr;
+      display: inline-block;
+      cursor: pointer;
+      line-height: 10px;
+      border-radius: 2px;
+
+      &.disabled {
+        .brandClrOpacity(0.3);
+        color: @lightBrandClr;
+        cursor: not-allowed;
+      }
+    }
+
+    .nav {
+      font-size: 11px;
+    }
+
+    .page-num {
+      color: @primaryTextClr;
+      text-decoration: none;
+      &.selected {
+        background: @brandClr;
+        color: #fff;
+        cursor: default;
+      }
+    }
+}

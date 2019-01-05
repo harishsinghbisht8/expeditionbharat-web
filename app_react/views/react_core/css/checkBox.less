@@ -1,0 +1,94 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+@checkboxButtonSize : 20px;
+@disabledColor : rgba(0, 0, 0, 0.32);
+@enabledColor : @ctaClr;
+
+.checkbox-list-item{
+	.u-disable-select;
+	font-size: @defaultFontSize;
+	letter-spacing: @textLetterSpacing;
+	padding: 5px;
+    cursor: pointer;
+
+	.checkbox-button {
+		width: @checkboxButtonSize;
+    	height: @checkboxButtonSize;
+    	border: solid 2px @disabledColor;
+    	border-radius: 3px;
+    	color: transparent;
+		font-size: 10px;
+		text-align: center;
+		overflow: hidden;
+
+		.check-icon {
+			.u-pos-abs;
+			left: 1px;
+		}
+
+    	&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 150%;
+			height: 150%;
+			border-radius: 50%;
+			background: @enabledColor;
+			transform: translate(-50%, -50%) scale(0);
+			-webkit-transform: translate(-50%, -50%) scale(0);
+			transition-duration: 0.20s;
+			-webkit-transition-duration: 0.20s;
+		}
+
+		&.selected {
+			color: @white;
+			border-color: @enabledColor;
+			transition-duration: 0.35s;
+		    -webkit-transition-duration: 0.35s;
+		    animation-timing-function: ease-out;
+		    -webkit-animation-timing-function: ease-out;
+			background: @enabledColor;
+
+			&:before {
+				transition-duration: 0.35s;
+			    -webkit-transition-duration: 0.35s;
+				transform: translate(-50%, -50%) scale(1);
+				-webkit-transform: translate(-50%, -50%) scale(1);
+				animation-timing-function: ease-out;
+			    -webkit-animation-timing-function: ease-out;
+			}
+		}
+
+	}
+
+	&.disabled {
+		cursor : not-allowed;
+		color : @tertiaryTextClr;
+
+		.checkbox-button {
+			border-color: rgba(0, 0, 0, .1) !important;
+			background: rgba(0, 0, 0, .01) !important;
+
+			&:before{
+				background-color : rgba(0, 0, 0, .1) !important;
+			}
+		}
+	}
+
+	&.u-ib {
+		margin-left: 10px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.label {
+		line-height: @checkboxButtonSize;
+		margin-left: 10px;
+    	top: 1px;
+	}
+}

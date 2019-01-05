@@ -1,0 +1,41 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+@counterWidth : 36px;
+@counterHeight : 26px;
+@symbolFontSize : 26px;
+
+.counter-parent {
+	.u-disable-select;
+	font-size: @largeFontSize;
+
+	span {
+		border: solid 1px @borderClr;
+    	width: @counterWidth;
+    	height: @counterHeight;
+    	line-height: @counterHeight;
+    	text-align: center;
+    	cursor: pointer;
+
+    	&.counter-negative, &.counter-positive {
+    		font-size: @symbolFontSize;
+    		color : @secondaryTextClr;
+    		line-height: @counterHeight - 4;
+    		transition : all @transitionDuration;
+
+    		&:hover {
+    			color : @primaryTextClr;
+    		}
+    	}
+
+        &.counter-disabled {
+            color : @tertiaryTextClr;
+            cursor: default;
+            &:hover {
+                color : @tertiaryTextClr;
+            }
+        }
+	}
+}

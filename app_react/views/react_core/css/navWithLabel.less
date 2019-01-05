@@ -1,0 +1,45 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.nav-with-label {
+	display: inline-block;
+	background: inherit;
+	color: @tertiaryTextClr;
+	box-shadow: @cardShadow;
+
+	.nav-label {
+		padding : 5px 0;
+		text-align : center;
+		min-width : 80px;
+	}
+	.nav-list{
+		span {
+			display : inline-block;
+			margin : 5px 0;
+			.text-display{
+				margin: 0;
+				line-height: 1;
+				.ic{
+					margin-left: 10px;
+				}
+			}
+			.nav-list-item {
+				font-size: @defaultFontSize;
+				font-weight: @semiBold;
+				letter-spacing: @textLetterSpacing;
+				color: @secondaryTextClr;
+				padding: 6px 20px;
+				cursor:pointer;
+				border-bottom : none !important;
+				&:hover, &.selected {
+					color: @ctaClr;
+				}
+			}
+			&:not(:last-child){
+				border-right : 1px solid @borderClr;
+			}
+		}
+	}
+}

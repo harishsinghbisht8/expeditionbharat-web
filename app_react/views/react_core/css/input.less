@@ -1,0 +1,111 @@
+
+@import (reference) "base.less";;
+@import (reference) "text.less";
+;
+
+.c-input-cntr {
+	.u-pos-rel;
+	border-bottom: 1px solid @borderClr;
+	height: 100%;
+	line-height: 24px;
+
+	.c-input {
+		border: none;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		border-radius: 0;
+		font-size: @defaultFontSize;
+		line-height: 25px;
+		color: rgba(0,0,0,.87);
+		outline: 0;
+		
+
+		&[disabled]{
+			cursor : not-allowed !important;
+			color :  @tertiaryTextClr;
+		}
+	}
+    .input-label {
+    	font-size: @smallFontSize;
+    	color: @tertiaryTextClr;
+    	transform: translate(0px, 0px);
+    	transition-duration: 200ms;
+    	cursor: text;
+    	height: 23px;
+    	overflow: visible;
+    }
+	.material-underline {
+		.u-pos-rel;
+		top: 2px;
+		display: block;
+		width: 100%;
+		&:before, &:after {
+		  	content: '';
+		  	height: 2px;
+		  	width: 0;
+		  	bottom: 1px;
+		  	.u-pos-abs;
+		  	background: @brandClr;
+		    -webkit-transition: 0.2s ease all;
+  			transition: 0.2s ease all;
+		}
+		&:before {
+			left: 50%;
+		}
+		&:after {
+			right: 50%;
+		}
+	}
+
+    &.animate{
+    	.input-label {
+        	transform: translate(8.3%,25px) scale(1.1666666666);
+        }
+    }
+    .error-message{
+		.u-pos-abs;
+    	display : none;
+		line-height: @defaultFontSize;
+		width: 100%;
+		color: @errorClr;
+		font-size: @smallFontSize;
+		padding: 5px 5px 5px 22px;
+	    background-color: @errorBgClr;
+	    border-radius: 3px;
+
+    	.ixi-icon-error {
+    		.u-pos-abs;
+    		left: 5px;
+    		top: 4px;
+    	}
+    }
+	&.error {
+	    border-bottom-color: @errorClr !important;
+
+	    .error-message {
+    		display : block;
+    	}
+    	.input-label {
+    		color : @errorClr !important;
+    		transform: translate(0px, 0px);
+			font-size: @smallFontSize;
+    	}
+    	.material-underline {
+			visibility: hidden;
+		}
+	}
+	&.focus {
+		.input-label {
+			color : @brandClr !important;
+			transform: translate(0px, 0px);
+			font-size: @smallFontSize;
+		}
+		.c-input ~ .material-underline:before, .c-input ~ .material-underline:after {
+		  width:50%;
+		}
+	}
+	&.no-border {
+		border-color: transparent !important;
+	}
+}

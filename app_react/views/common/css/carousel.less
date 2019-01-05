@@ -1,0 +1,76 @@
+@import (reference) "../../react_core/css/variables.less";
+@import (reference) "../../react_core/css/base.less";
+
+.c-carousel {
+	position: relative;
+	width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+	.carousel-heading {
+		text-align: center;
+		font-size: @largeFontSize;
+		margin-bottom: 30px;
+	}
+
+	.slider-wrapper {
+		position: relative;
+
+		.slider-container {
+			margin: 0 auto;
+    		max-width: 1024px;
+
+			-webkit-transition: .5s transform;
+		    -o-transition: .5s transform;
+		    transition: .5s transform;
+		    -webkit-transform: translate3d(0,0,0);
+		    transform: translate3d(0,0,0);
+
+		    .carousel-item {
+		    	display: inline-block;
+		    	vertical-align: top;
+		    	white-space: normal;
+			    height: 100%;
+			    -webkit-transition: .5s opacity;
+			    -o-transition: .5s opacity;
+			    transition: .5s opacity;
+			    -webkit-transform: translate3d(0,0,0);
+			    transform: translate3d(0,0,0);
+			    opacity: 0.2;
+
+			    &.central-item {
+			    	opacity: 1
+			    }
+		    }
+		}
+
+		.nav-btn {
+			position: absolute;
+			top: 40%;
+			text-align: center;
+		    height: 60px;
+		    width: 60px;
+		    border-radius: 50%;
+		    background-color: #FFF;
+		    color: @secondaryTextClr;
+		    box-shadow: 0 2px 64px 0 rgba(208,208,208,.5);
+		    z-index: 2;
+		    cursor: pointer;
+
+			&.prev-nav {
+				left: 40px;
+				-webkit-transform: rotate(180deg);
+              	transform: rotate(180deg);
+			}
+			&.next-nav {
+				right: 40px;
+			}
+			.arrow-icon {
+				position: relative;
+				top: 17px;
+				font-size: @midFontSize;
+			}
+		}
+
+	}
+}

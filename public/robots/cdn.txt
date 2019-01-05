@@ -1,0 +1,38 @@
+User-agent: *
+
+Disallow: /
+Allow: /img/
+Allow: /image/
+Allow: /ixi-api/resize
+Allow: /ixi-api/img/
+Allow: /ixi-api/images/
+Allow: /node_image/
+Allow: /rt/
+Allow: /rt-seo/
+
+
+User-agent: Googlebot
+
+Disallow: /
+Allow: /img/
+Allow: /image/
+Allow: /ixi-api/resize
+Allow: /ixi-api/img/
+Allow: /ixi-api/images/
+Allow: /node_image/
+Allow: /rt/
+Allow: /rt-seo/
+
+
+
+User-agent: Googlebot-Image
+
+Disallow: /
+Allow: /img/
+Allow: /image/
+Allow: /ixi-api/resize
+Allow: /ixi-api/img/
+Allow: /ixi-api/images/
+Allow: /node_image/
+Allow: /rt/
+Allow: /rt-seo/

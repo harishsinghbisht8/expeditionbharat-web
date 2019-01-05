@@ -1,0 +1,39 @@
+
+@import (reference) "base.less";
+@import (reference)"grid.less";
+@import (reference) "text.less";
+
+.number-counter {
+	.label{
+		width : 50px;
+		margin-right : 25px;
+		color : #999;
+		.main {
+			font-size : 16px;
+			line-height : 16px;
+		}
+		.sub {
+			font-size : 12px;
+		}
+	}
+	.items {
+		.counter-item {
+			font-size : 16px;
+			width: 32px;
+			cursor: pointer;
+			height : 32px;
+			line-height : 32px;
+
+			&.disabled {
+				color : #aaa !important;
+				border : none !important;
+				cursor: not-allowed;
+			}
+			&.current, &:hover {
+				color : @brandClr;
+				border : 1px solid @brandClr;	
+			}
+
+		}
+	}
+}

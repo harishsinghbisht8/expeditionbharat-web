@@ -1,0 +1,294 @@
+@import (reference) "base.less";
+@import (reference) "text.less";
+
+.c-auto-cmpltr {
+	.u-pos-rel;
+	.autocompleter-results-caret{
+		&:before, &:after {
+			width: 0;
+		    height: 0;
+		    position: absolute;
+		    content: " ";
+		    left: 15px;
+		}
+
+		&:before {
+			top: -10px;
+			border-left: 9px solid transparent;
+		    border-bottom: 10px solid rgba(0,0,0,.10);
+		    border-right: 9px solid transparent;
+		    top: -10px;
+		    margin-left: -2px;
+		}
+
+		&:after {
+			top: -7px;
+			border-left: 7px solid transparent;
+		    border-bottom: 7px solid #FFF;
+		    border-right: 7px solid transparent;
+		    top: -7px;
+		    margin-left: 0;
+		}
+	}
+	.autocompleter-results {
+		.u-pos-abs;
+		font-size: 0;
+		left : 0;
+		right : 0;
+		box-shadow: 0 0 10px @shadowClr;
+		background-color: @white;
+		z-index : 9;
+		margin-top : 8px;
+
+		&.u-cstm-scroll {
+			overflow-y: auto;
+			margin-top : 5px;
+		}
+
+		.result-row{
+			border-left: 3px solid transparent;
+			&:hover, &.selected{
+				background-color: @defaultHoverClr;
+				border-left-color: @brandClr;
+			}
+
+			&.flight-airport {
+				.recent-search-icon{
+					.u-ib;
+					.u-v-align-middle;
+					.u-text-center;
+					width: 40px;
+					margin-right: 10px;
+					font-size: 22px;
+					line-height: 1;
+    				color: @secondaryTextClr;
+				}
+				.airport-code {
+					.u-ib;
+					.u-v-align-middle;
+
+				    width: 40px;
+				    text-align: center;
+				    border: 1px solid @secondaryTextClr;
+				    margin-right: 10px;
+				    font-size: @smallFontSize;
+				    font-weight: @light;
+					line-height: @largeFontSize;
+					border-radius: 2px;
+					color: @secondaryTextClr;
+				}
+				.destination-icon{
+					.u-ib;
+					.u-v-align-middle;
+
+				    width: 40px;
+				    text-align: center;
+				    margin-right: 10px;
+				    font-size: @smallFontSize;
+				    font-weight: @light;
+					line-height: @largeFontSize;
+					color: @secondaryTextClr;
+				}
+				.text-cntr {
+					line-height: @largeFontSize;
+
+					.city{
+						font-size: @defaultFontSize;
+						color : @primaryTextClr;
+						.u-text-ellipsis;
+						text-transform: capitalize;
+					}
+
+					.airport {
+						font-size: @smallFontSize;
+						color: @secondaryTextClr;
+						.u-text-ellipsis;
+
+						.interpunct{
+							.u-ib;
+							.u-v-align-middle;
+							width: 4px;
+						    height: 4px;
+						    border-radius: 4px;
+						    background-color: @secondaryTextClr;
+						    margin: 0px 5px;
+						}
+					}
+
+					.city-row.show-nearby {
+						.city {
+							.u-ib;
+							.calcWidth(~"100% - 115px");
+							.u-v-align-middle;
+						}
+						.nearby-city {
+							.u-ib;
+							width: 115px;
+							.u-text-right;
+							.u-text-ellipsis;
+							.u-v-align-middle;
+							font-size: @smallFontSize;
+							color: @secondaryTextClr;
+						}
+					}
+					&.recent-search {
+						.u-ib;
+						.u-v-align-middle;
+						.calcWidth(~"100% - 50px");
+					}
+				}
+			}
+
+			&.train-recent-search {
+				.recent-search-icon{
+					.u-ib;
+					.u-v-align-middle;
+					.u-text-center;
+					width: 40px;
+					margin-right: 10px;
+					font-size: 22px;
+					line-height: 1;
+    				color: @secondaryTextClr;
+    			}
+				.text-cntr {
+					.u-ib;
+					.u-v-align-middle;
+					.calcWidth(~"100% - 50px");
+					line-height: @largeFontSize;
+
+					.city{
+						font-size: @defaultFontSize;
+						color : @primaryTextClr;
+						.u-text-ellipsis;
+					}
+					.date-class {
+						font-size: @smallFontSize;
+						color: @secondaryTextClr;
+						.u-text-ellipsis;
+					}
+				}
+
+			}
+
+
+			&.hotels {
+				text-transform: capitalize;
+				.hotel-name {
+					font-size: @defaultFontSize;
+					color : @primaryTextClr;
+					width: 100%;
+					.name{
+						.u-text-ellipsis;
+						max-width: 75%;
+					}
+				}
+				.hotel-location {
+					font-size: @smallFontSize;
+					color: @secondaryTextClr;
+					.u-text-ellipsis;
+					span:not(:last-child):after {
+					    content: ', ';
+					}
+				}
+			}
+
+			&.planner {
+
+				.icon-cntr {
+					width : 30px;
+					height : 30px;
+					background-color : @sectionHeaderbgClr;
+				}
+
+				.text-cntr {
+					margin-left : 10px;
+					font-size: @defaultFontSize;
+					color : @primaryTextClr;
+					.u-text-ellipsis;
+					.calcWidth(~"100% - 50px");
+
+					.location {
+						font-size: @smallFontSize;
+						color: @secondaryTextClr;
+
+						span {
+							&:not(:last-child):after, &:first-child:before{
+								content : ", ";
+							}
+						}
+					}
+				}
+
+			}
+
+			&.bus-origin {
+				.city-name {
+					font-size: @defaultFontSize;
+					color : @primaryTextClr;
+					.u-text-ellipsis;
+				}
+
+				.state-name {
+					font-size: @smallFontSize;
+					color: @secondaryTextClr;
+					.u-text-ellipsis;
+				}
+			}
+
+			.tag-name{
+				padding: 2px 10px;
+				background: #f6f6f6;
+				background: @tagBgClr;
+				border-radius: 10px;
+				text-align: center;
+				border: 1px solid #f0eeee;
+				border: 1px solid @tagBrdrClr;
+				display: inline-block;
+				font-size: @smallFontSize;
+			}
+
+			&:hover{
+				.tag-name{
+					color: @brandClr;
+					border: 1px solid @brandClr;
+					background: @white;
+				}
+			}
+		}
+
+		.error-msg-cnt {
+			font-size: 14px;
+			color: @errorClr;
+			padding: 10px;
+			background-color: @errorAcBg;
+			.error-msg, .error-icon {
+				.u-ib;
+				.u-v-align-middle;
+			}
+			.error-msg {
+				.calcWidth(~"100% - 16px");
+				padding-right: 5px;
+				line-height: 1.5;
+				word-break: break-word;
+			}
+		}
+	}
+	.c-input {
+		.calcWidth(~"100% - 20px");
+	}
+	.clear-input {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		right: 0;
+		top: 28px;
+		cursor : pointer;
+		font-size: 10px;
+		text-align: center;
+		color : #AAA;
+
+		&.selected, &:hover {
+			color: #FFF;
+		}
+	}
+}
