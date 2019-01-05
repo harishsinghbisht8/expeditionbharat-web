@@ -33,12 +33,14 @@ var isSecure = function(req) {
 module.exports = function (app, config, router) {
   let filePromise = fileController.init()
   filePromise.then(function(fileHashes) {
-    commonFilesHashes={
-      runtime: fileHashes['runtime'],
-      common: fileHashes['common'],
-      app: fileHashes['app'],
-      polyfill: fileHashes['polyfill']
-    };
+    if(fileHashes && fileHashes.runtime) {
+      commonFilesHashes={
+        runtime: fileHashes['runtime'],
+        common: fileHashes['common'],
+        app: fileHashes['app'],
+        polyfill: fileHashes['polyfill']
+      };
+    }
   })
 
   app.disable('etag');
@@ -97,7 +99,7 @@ module.exports = function (app, config, router) {
     res.locals.selfUrl = ( isSecure(req) ? 'https' : 'http') + '://' + req.get('host') + (req.path !== "/" ? req.path : "");
     res.locals.commonFilesHashes = commonFilesHashes;
     
-    if (req.url.indexOf("/js/") != -1 || req.url.indexOf("/css/") != -1 || req.url.indexOf("/fonts/") != -1) {
+    if (req.url.indexOf("/js/") != -1 || req.url.indexOf("/css/") != -1 || req.url.indexOf("/fonts/") != -1 || req.url.indexOf("/img/") != -1) {
       //add cache header for static js, css and font files to 1 year
       res.setHeader("Cache-Control", "public, max-age=31536000");
       res.setHeader("Expires", new Date(Date.now() + 31536000000).toUTCString());

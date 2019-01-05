@@ -12,7 +12,7 @@ export default class Header extends Component {
     render() {
         return (
         	<header>
-        		this is header
+        		Expedition Bharat
             </header>
         );
     }
