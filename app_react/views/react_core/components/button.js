@@ -12,6 +12,7 @@ export default class Button extends Component {
 		super(props);
 
         this.clickHandler = this.clickHandler.bind(this);
+        this.animationHandler = this.animationHandler.bind(this);
 	}
 
     clickHandler(e) {
@@ -20,34 +21,37 @@ export default class Button extends Component {
         if(this.props.noRipple) {
             this.props.onClick(e);
         } else {
-            let $ripple = $(this.ripple);
-            let $offset = $ripple.parent().offset();
-            let $circle = $ripple.find('.u-ripple-circle');
+            let ripple = this.ripple;
+            let parent = this.ripple.parentElement;
+            let circle = ripple.querySelector('.u-ripple-circle');
 
-            let x = e.pageX - $offset.left;
-            let y = e.pageY - $offset.top;
+            let x = e.pageX - parent.offsetLeft;
+            let y = e.pageY - parent.offsetTop;
 
-            $circle.css({
-                top: y + 'px',
-                left: x + 'px'
-            });
+            circle.style.top = y + 'px';
+            circle.style.left = x + 'px';
 
-            $ripple.addClass('is-active');
+            ripple.classList.add('is-active');
         }
+    }
+
+    animationHandler() {
+        this.ripple.classList.remove('is-active');
+        this.props.onClick();
     }
 
     componentDidMount() {
         if(this.props.noRipple) return;
-        let $ripple = $(this.ripple);
-        $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', () => {
-            $ripple.removeClass('is-active');
-            this.props.onClick();
-        });
+
+        ['animationend', 'webkitAnimationEnd', 'oanimationend', 'MSAnimationEnd'].forEach( evt => 
+            this.ripple.addEventListener(evt, this.animationHandler, false)
+        );
     }
 
     componentWillUnmount() {
-        let $ripple = $(this.ripple);
-        $ripple.off('animationend webkitAnimationEnd oanimationend MSAnimationEnd');
+        ['animationend', 'webkitAnimationEnd', 'oanimationend', 'MSAnimationEnd'].forEach( evt => 
+            this.ripple.removeEventListener(evt, this.animationHandler, false)
+        );
     }
 
     getButtonContent() {
