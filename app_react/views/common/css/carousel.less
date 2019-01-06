@@ -16,7 +16,7 @@
 	.slider-wrapper {
 		position: relative;
 		margin: 0 auto;
-		max-width: 910px;
+		max-width: 1210px;
 		overflow: hidden;
 
 		.slider-container {
@@ -37,12 +37,15 @@
 			    transition: .5s opacity;
 			    -webkit-transform: translate3d(0,0,0);
 			    transform: translate3d(0,0,0);
-			    opacity: 0;
 			    margin-right: 5px;
-			    width: 300px;
+			    width: 400px;
 
 			    &:last-item {
 			    	margin-right: 0;
+			    }
+
+			    &.shaded {
+			    	opacity: 0;
 			    }
 
 			    &.central-item {
@@ -57,11 +60,6 @@
 		    z-index: 2;
 		    cursor: pointer;
 		    padding: 20px 0;
-		    opacity: 0.5;
-
-		    &:hover {
-		    	opacity: 1;
-		    }
 
 			&.prev-nav {
 				left: 2px;

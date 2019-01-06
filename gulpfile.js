@@ -16,7 +16,7 @@ gulp.task("swUglifyJS", function () {
 
 gulp.task("compileCSS", [], function () {
     var stream1 = gulp
-        .src(["./app_react/views/home/css/index.less"])
+        .src(["./app_react/views/react_core/css/common.less", "./app_react/views/home/css/index.less"])
         .pipe(less())
         .pipe(concat("eb.home.css"))
         .pipe(minifyCSS())

@@ -96,16 +96,16 @@ export default class Carousel extends Component {
     }
 
     componentDidMount() {
-        if(this.carouselItem.length){
-            for(let index in this.carouselItem){
-                if(index < this.props.visibleElements){
+        if(this.carouselItem.length) {
+            for(let index in this.carouselItem) {
+                if(index < this.props.visibleElements) {
                     this.carouselItem[index].classList.add('central-item');
-                }else if (index == this.props.visibleElements){
+                } else if (index == this.props.visibleElements) {
                     break;
                 }
             }
             if(this.props.defaultPosition && this.props.htmlArray.length > this.props.visibleElements) {
-                for(let i=0; i<this.props.defaultPosition; i++){
+                for(let i=0; i<this.props.defaultPosition; i++) {
                     this.moveSlider(null, 'right');
                 }
             }
@@ -134,7 +134,7 @@ export default class Carousel extends Component {
                             this.props.htmlArray.map((item, index) => {
                                 let crouselHTML = [];
                                 crouselHTML.push(
-                                    <div className="carousel-item shaded" onClickCapture={(e) => this.handleClickViaCapturing(e, index)} ref={(ref) => this.carouselItem[index] = ref}>
+                                    <div className={"carousel-item " + (ReactifyCore.isBrowser ? "shaded" : "")} onClickCapture={(e) => this.handleClickViaCapturing(e, index)} ref={(ref) => this.carouselItem[index] = ref}>
                                         {item}
                                     </div>
                                 )

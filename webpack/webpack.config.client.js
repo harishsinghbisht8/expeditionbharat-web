@@ -30,8 +30,7 @@ module.exports = (env = {}) => {
             "preact",
             "preact-router",
             "preact-async-route",
-            "reactify-core",
-            path.resolve(__dirname, "../app_react/views/react_core/css/common.less")
+            "reactify-core"
         ],
     },
     /**

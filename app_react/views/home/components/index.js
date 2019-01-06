@@ -42,7 +42,6 @@ export default class Home extends Component {
         return(
             <div className='page-content'>
                 <div className='coming-soon-banner'>
-                    {this.renderHeader()}
                     <div className='first-line'>Coming Soon!!!</div>
                     <div className='second-line'>A trekking experience that will astonish you</div>
                 </div>
@@ -55,6 +54,7 @@ export default class Home extends Component {
         let screen = this.state.screen;
         return (
             <div className='home-page'>
+                {this.renderHeader()}
                 {this.renderContent()}
                 {ReactifyCore.Utils.isBrowser ? "" : <input type="hidden" value={JSON.stringify(this.props.data)} id="dataBE" />}
             </div>
