@@ -10,16 +10,17 @@
 	.carousel-heading {
 		text-align: center;
 		font-size: @largeFontSize;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	.slider-wrapper {
 		position: relative;
+		margin: 0 auto;
+		max-width: 910px;
+		overflow: hidden;
 
 		.slider-container {
-			margin: 0 auto;
-    		max-width: 1024px;
-
+    		width: 100%;
 			-webkit-transition: .5s transform;
 		    -o-transition: .5s transform;
 		    transition: .5s transform;
@@ -36,7 +37,13 @@
 			    transition: .5s opacity;
 			    -webkit-transform: translate3d(0,0,0);
 			    transform: translate3d(0,0,0);
-			    opacity: 0.2;
+			    opacity: 0;
+			    margin-right: 5px;
+			    width: 300px;
+
+			    &:last-item {
+			    	margin-right: 0;
+			    }
 
 			    &.central-item {
 			    	opacity: 1
@@ -44,32 +51,65 @@
 		    }
 		}
 
-		.nav-btn {
+		.nav-btn-cntnr {
 			position: absolute;
 			top: 40%;
-			text-align: center;
-		    height: 60px;
-		    width: 60px;
-		    border-radius: 50%;
-		    background-color: #FFF;
-		    color: @secondaryTextClr;
-		    box-shadow: 0 2px 64px 0 rgba(208,208,208,.5);
 		    z-index: 2;
 		    cursor: pointer;
+		    padding: 20px 0;
+		    opacity: 0.5;
+
+		    &:hover {
+		    	opacity: 1;
+		    }
 
 			&.prev-nav {
-				left: 40px;
-				-webkit-transform: rotate(180deg);
-              	transform: rotate(180deg);
+				left: 2px;
 			}
 			&.next-nav {
-				right: 40px;
+				right: 2px;
+				.transform-rotate(180deg);
 			}
-			.arrow-icon {
-				position: relative;
-				top: 17px;
-				font-size: @midFontSize;
-			}
+		}
+
+		.nav-btn {
+			text-align: center;
+			height: 5px;
+			width: 30px;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+
+		.nav-btn:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 51%;
+			background: rgba(255,255,255,0.8);
+			-webkit-transform: skew(0deg, 30deg);
+			-moz-transform: skew(0deg, 30deg);
+			-ms-transform: skew(0deg, 30deg);
+			-o-transform: skew(0deg, 30deg);
+			transform: skew(0deg, 30deg);
+		}
+		.nav-btn:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 50%;
+			background: rgba(255,255,255,0.8);
+			-webkit-transform: skew(0deg, -30deg);
+			-moz-transform: skew(0deg, -30deg);
+			-ms-transform: skew(0deg, -30deg);
+			-o-transform: skew(0deg, -30deg);
+			transform: skew(0deg, -30deg);
 		}
 
 	}

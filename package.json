@@ -12,7 +12,8 @@
     "prestart": "yarn build",
     "start": "node compiled/webpack.server.js",
     "build": "gulp; webpack --config webpack/webpack.config.js --progress; gulp swUglifyJS",
-    "watch": "NODE_ENV=dev yarn build --watch"
+    "buildWatch": "gulp; webpack --config webpack/webpack.config.js --progress",
+    "watch": "NODE_ENV=dev yarn buildWatch --watch"
   },
   "dependencies": {
     "babel-cli": "^6.18.0",

@@ -8,7 +8,7 @@ const workboxPlugin = require("workbox-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const ChunkFileListPlugin = require("./plugins/chunkFileList");
 const path = require("path");
-const node_env = process.env.NODE_ENV || "build";
+const node_env = process.env.NODE_ENV || "dev";
 const isDev = node_env === "dev";
 const config = require("../config/config")[node_env];
 const ifNotDev = plugin => (!isDev ? plugin : undefined);

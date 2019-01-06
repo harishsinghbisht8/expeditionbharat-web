@@ -12,7 +12,9 @@ export default class Header extends Component {
     render() {
         return (
         	<header>
-        		Expedition Bharat
+        		<div className="title">Expedition Bharat</div>
+
+                <div className='contact-info'>harishsinghbisht8@gmail.com</div>
             </header>
         );
     }
