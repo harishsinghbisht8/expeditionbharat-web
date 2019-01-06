@@ -80,8 +80,8 @@ module.exports = (env = {}) => {
     },
 
     plugins: removeEmpty([
-        new CleanWebpackPlugin(["dist/*.*"], {
-            root: path.resolve(__dirname, "../public/js")
+        new CleanWebpackPlugin(["*.*"], {
+            root: path.resolve(__dirname, "../public/js/dist")
         }),
         new workboxPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, "../service-worker-raw.js"),
