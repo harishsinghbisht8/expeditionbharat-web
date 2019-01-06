@@ -11,7 +11,7 @@ let chunkFileListJSON = {};
 
 export function init() {
 	return new Promise((resolve, reject)=> {
-		fs.readFile(path.join(rootPath, '/js/dist/chunkFileList.json'), 'utf8', function (err, data) {
+		fs.readFile(path.join(rootPath, '/js/chunkFileList.json'), 'utf8', function (err, data) {
 			if (err) {
 				console.error('chuckFileList.json reading error', err);
 				resolve();

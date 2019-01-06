@@ -81,7 +81,7 @@ module.exports = (env = {}) => {
 
     plugins: removeEmpty([
         new CleanWebpackPlugin(["*.*"], {
-            root: path.resolve(__dirname, "../public/js/dist")
+            root: outputPath
         }),
         new workboxPlugin.InjectManifest({
             swSrc: path.resolve(__dirname, "../service-worker-raw.js"),
@@ -121,7 +121,7 @@ module.exports = (env = {}) => {
         }),
         new ChunkFileListPlugin({
             filename: 'chunkFileList.json',
-            path: outputPath
+            path: path.resolve(__dirname, "../public/js")
         }),
         new BundleAnalyzerPlugin({
             // In `static` mode single HTML file with bundle report will be generated.
