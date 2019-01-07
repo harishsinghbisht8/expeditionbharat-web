@@ -42,7 +42,7 @@ export default class Home extends Component {
         return(
             <div className='page-content'>
                 <div className='coming-soon-banner'>
-                    <img className='website-logo' src='/img/logo.png' />
+                    <!-- <img className='website-logo' src='/img/logo.png' /> -->
                     <div className='first-line'>Coming Soon</div>
                     <div className='second-line'>We are adventure travel company started by two adventurous friends for trekking and biking</div>
                     <div className='third-line'>expeditionbharat@gmail.com</div>
