@@ -5,33 +5,72 @@
 @import "../../common/css/carousel.less";
 
 .home-page {
+    height: inherit;
     .page-content {
+        height: inherit;
+        background-image: url("/img/comingsoon.jpg");
+        background-size: cover;
+        background-position: 0;
+
         .coming-soon-banner {
-            background: url("/img/carousel/1.jpg");
-            height: 400px;
-            padding-top: 20px;
-            background-size: cover;
-            background-position: 0;
-            color: #FFF;
+            background: rgba(0,0,0,0.3);
+            height: inherit;
+            padding-top: 70px;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
+            font-size: 16px;
+            position: relative;
+
+            .website-logo {
+                width: 200px;
+            }
 
             .first-line {
-                font-size: 35px;
+                font-size: 56px;
+                color: #FFF;
             }
 
-            .second-line {
-                font-size: 25px;
+            .second-line, .third-line {
+                font-size: 16px;
+                width: 500px;
+                margin: 10px auto 20px;
+            }
+
+            .follow-us {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                div {
+                    margin-bottom: 15px;
+                }
+
+                ul {
+                    font-size: 0;
+                }
+
+                li {
+                    margin: 0 15px;
+                }
+
+                li, a, img {
+                    display: inline-block;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                }
             }
         }
 
-        .carousel {
-            margin-top: 10px;
-        }
+        // .carousel {
+        //     margin-top: 10px;
+        // }
 
-        .carousel-item {
-        	img {
-        		width: 400px;
-        	}
-        }
+        // .carousel-item {
+        // 	img {
+        // 		width: 400px;
+        // 	}
+        // }
     }
 }
