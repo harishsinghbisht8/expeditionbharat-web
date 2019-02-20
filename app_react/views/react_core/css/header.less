@@ -4,7 +4,7 @@ header {
 	color: #000;
 	text-align: initial;
 	padding: 5px 10px;
-	background: #F1F196;
+	background: #5A36EF;
 	
 	.header-cntnt {
 		max-width: 1280px;
@@ -84,13 +84,15 @@ header {
 	.dropdown-list-item {
 		.u-nostyle-link;
 		display: inline-block;
-		color: @primaryTextClr;
+		color: @tertiaryTextClr;
 		padding: @ddPadding;
 		width: 100%;
 		cursor : pointer;
+		text-transform: capitalize;
+		white-space: nowrap;
 
 		&:hover, &.selected {
-			background: #F00;
+			color: @primaryTextClr;
 		}
 
 		&.disabled {
