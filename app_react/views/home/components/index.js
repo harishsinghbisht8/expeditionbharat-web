@@ -61,22 +61,22 @@ export default class Home extends Component {
             <div className='page-content'>
                 <div className='coming-soon-banner'>
                     <div className="max-width-cntnr">
-                        <div className='query-form'>
+                        <form className='query-form' action="/submit-query" method="POST">
                             <div className="query-header">Any query?</div>
-                            <ReactifyCore.Components.Input label="Name" />
-                            <ReactifyCore.Components.Input label="Destination" />
-                            <ReactifyCore.Components.Input label="Email" />
-                            <ReactifyCore.Components.Input label="Mobile" />
-                            <ReactifyCore.Components.Input label="From" type="date" />
-                            <ReactifyCore.Components.Input label="To" type="date" />
+                            <ReactifyCore.Components.Input label="Name" name="name" />
+                            <ReactifyCore.Components.Input label="Destination" name="destination" />
+                            <ReactifyCore.Components.Input label="Email" name="email" />
+                            <ReactifyCore.Components.Input label="Mobile" name="mobile" />
+                            <ReactifyCore.Components.Input label="From" type="date" name="fromdate" />
+                            <ReactifyCore.Components.Input label="To" type="date" name="todate" />
                             <div className="query-message c-input-cntr">
                                 <div className="input-label">Message</div>
-                                <textarea rows="3"></textarea>
+                                <textarea rows="3" name="message"></textarea>
                             </div>
                             <div className="submit-button">
-                                <ReactifyCore.Components.Button text="SUBMIT" onClick={this.submitQuery} />
+                                <ReactifyCore.Components.Button text="SUBMIT" type="submit" onClick={this.submitQuery} />
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
