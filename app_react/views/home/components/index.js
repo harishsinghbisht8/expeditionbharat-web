@@ -12,7 +12,7 @@ export default class Home extends Component {
             
         };
         
-        ["renderFooter"].forEach(fn => (this[fn] = this[fn].bind(this)));
+        ["submitQuery"].forEach(fn => (this[fn] = this[fn].bind(this)));
     }
 
     renderFooter() {
@@ -53,11 +53,31 @@ export default class Home extends Component {
                     // </div>
     //             </div>
 
+    submitQuery() {
+
+    }
     renderContent() {
         return(
             <div className='page-content'>
                 <div className='coming-soon-banner'>
-
+                    <div className="max-width-cntnr">
+                        <div className='query-form'>
+                            <div className="query-header">Any query?</div>
+                            <ReactifyCore.Components.Input label="Name" />
+                            <ReactifyCore.Components.Input label="Destination" />
+                            <ReactifyCore.Components.Input label="Email" />
+                            <ReactifyCore.Components.Input label="Mobile" />
+                            <ReactifyCore.Components.Input label="From" type="date" />
+                            <ReactifyCore.Components.Input label="To" type="date" />
+                            <div className="query-message c-input-cntr">
+                                <div className="input-label">Message</div>
+                                <textarea rows="3"></textarea>
+                            </div>
+                            <div className="submit-button">
+                                <ReactifyCore.Components.Button text="SUBMIT" onClick={this.submitQuery} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

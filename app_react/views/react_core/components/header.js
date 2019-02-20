@@ -25,7 +25,7 @@ export default class Header extends Component {
         let navListIndex = this.state.navListIndex
         return (
         	<header>
-                <div className='header-cntnt'>
+                <div className='header-cntnt max-width-cntnr'>
                     <div className="logo-cntr">
                         <a href="/" className="hdr-logo">
                             <img className="logo" alt="expeditionbharat.com" title="expeditionbharat.com" src="/img/logo.png" width={250} />

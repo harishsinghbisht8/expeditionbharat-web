@@ -9,12 +9,68 @@
     .page-content {
         .coming-soon-banner {
             background: url("/img/carousel/1.jpg");
-            height: 400px;
-            padding-top: 20px;
+            height: 450px;
             background-size: cover;
             background-position: 0;
             color: #FFF;
             text-align: center;
+
+            .max-width-cntnr {
+                height: 100%;
+                position: relative;
+            }
+
+            .query-form {
+                width: 350px;
+                padding: 10px;
+                background: rgba(0,0,0,0.2);
+                position: absolute;
+                right: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                .query-header {
+                    color: rgba(255, 255, 255, 0.87);
+                    font-size: 24px;
+                }
+
+                .c-input-cntr {
+                    width: 47%;
+                    display: inline-block;
+                    margin-right: 6%;
+                    margin-bottom: 10px;
+
+                    .input-label {
+                        text-align: left;
+                        color: #FFF;
+                    }
+
+                    &:nth-child(2n+1) {
+                        margin-right: 0;
+                    }
+                }
+
+                .query-message.c-input-cntr {
+                    width: 100%;
+                    margin-right: 0;
+
+                    textarea {
+                        width: 100%;
+                        font-size: 14px;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+                .submit-button {
+                    width: 200px;
+                    margin: 0 auto;
+                }
+            }
         }
 
         .carousel {
