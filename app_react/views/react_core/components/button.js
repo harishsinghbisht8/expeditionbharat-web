@@ -68,7 +68,7 @@ export default class Button extends Component {
         if(this.props.isSecondary) className += ' secondary';
 
         return (
-            <button className={className + " " + (this.props.disabled ? 'disabled' : 'enabled')} onClick={this.clickHandler}>
+            <button className={className + " " + (this.props.disabled ? 'disabled' : 'enabled')} type={this.props.type} onClick={this.clickHandler}>
                 {this.props.noRipple ? '' :
                     <div className="u-ripple" ref={ref=>this.ripple=ref}>
                         <span className="u-ripple-circle"></span>
