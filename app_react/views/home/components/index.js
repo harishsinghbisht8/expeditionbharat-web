@@ -5,25 +5,25 @@ import Carousel from "../../common/components/carousel";
 
 let carouselImages = 11;
 export default class Home extends Component {
-    // constructor(props) {
-    //     super(props);
+    constructor(props) {
+        super(props);
         
-    //     this.state = {
+        this.state = {
             
-    //     };
+        };
         
-    //     ["renderFooter"].forEach(fn => (this[fn] = this[fn].bind(this)));
-    // }
+        ["renderFooter"].forEach(fn => (this[fn] = this[fn].bind(this)));
+    }
 
-    // renderFooter() {
-    //     return <ReactifyCore.Components.Footer />
-    // }
+    renderFooter() {
+        return <ReactifyCore.Components.Footer />
+    }
 
-    // renderHeader() {
-    // 	return(
-    //     	<ReactifyCore.Components.Header />
-    //     );
-    // }
+    renderHeader() {
+    	return(
+        	<ReactifyCore.Components.Header />
+        );
+    }
 
     // renderCarousel() {
     //     let htmlArray =[];
@@ -38,22 +38,26 @@ export default class Home extends Component {
     //     );
     // }
 
+    // <div className='coming-soon-banner'>
+    //                 <img className='website-logo' src='/img/logo.png'/>
+                    // <div className='first-line'>Coming Soon</div>
+                    // <div className='second-line'>We are adventure travel company started by two adventurous friends for trekking and biking</div>
+                    // <div className='third-line'>expeditionbharat@gmail.com</div>
+
+                    // <div className='follow-us'>
+                    //     <div>Follow us for update</div>
+                    //     <ul className='social-btn'>
+                    //         <li><a title="facebook" target="_blank" href='https://www.facebook.com/expeditionbharat'><img alt="facebook" src="/img/fb_logo.png" /></a></li>
+                    //         <li><a title="instagram" target="_blank" href='https://www.instagram.com/expeditionbharat'><img alt="instagram" src="/img/insta_logo.png" /></a></li>
+                    //     </ul>
+                    // </div>
+    //             </div>
+
     renderContent() {
         return(
             <div className='page-content'>
                 <div className='coming-soon-banner'>
-                    <img className='website-logo' src='/img/logo.png'/>
-                    <div className='first-line'>Coming Soon</div>
-                    <div className='second-line'>We are adventure travel company started by two adventurous friends for trekking and biking</div>
-                    <div className='third-line'>expeditionbharat@gmail.com</div>
 
-                    <div className='follow-us'>
-                        <div>Follow us for update</div>
-                        <ul className='social-btn'>
-                            <li><a title="facebook" target="_blank" href='https://www.facebook.com/expeditionbharat'><img alt="facebook" src="/img/fb_logo.png" /></a></li>
-                            <li><a title="instagram" target="_blank" href='https://www.instagram.com/expeditionbharat'><img alt="instagram" src="/img/insta_logo.png" /></a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         );
@@ -63,6 +67,7 @@ export default class Home extends Component {
         let screen = this.state.screen;
         return (
             <div className='home-page'>
+                {this.renderHeader()}
                 {this.renderContent()}
                 {ReactifyCore.Utils.isBrowser ? "" : <input type="hidden" value={JSON.stringify(this.props.data)} id="dataBE" />}
             </div>
