@@ -24,23 +24,13 @@ function renderPage() {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/service-worker-nm.js').then(registration => {
                 console.log('SW registered: ', registration);
+                registration.unregister().then(function(boolean) {
+                    console.log("service worker unregistered");
+                });
             }).catch(registrationError => {
                 console.log('SW registration failed: ', registrationError);
             });
         });
-
-        function updateOnlineStatus(event) {
-            let bodyElem = document.querySelector('body');
-            if (navigator.onLine) {
-                bodyElem.classList.remove("offline");
-            } else {
-                bodyElem.classList.add("offline");
-            }
-        }
-
-        window.addEventListener('online', updateOnlineStatus);
-        window.addEventListener('offline', updateOnlineStatus);
-        updateOnlineStatus();
     }
 }
 
