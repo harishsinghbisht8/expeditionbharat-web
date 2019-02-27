@@ -83,7 +83,7 @@ export default class Home extends Component {
             {
                 img: "/img/reviews/tanzi.jpg",
                 name: "Priya Ajay, Delhi",
-                review: "This i must share. So it was my first trek ever and the place was NAAG TIBBA and had no clue the amount of difficulties i am gonna face. But was pretty excited about living in camp surrounded by big dense forest up on the hills, scary or adventurous it can be called but for me it was threatening at first . It a trek of around 8 km starting from Pantwari. I started trek in the morning with 7 other people and this guide Harry from Expedition, hardly after 200m i gueess my strength, my energy gave out :P. I knew i wont be able to do it. But this guy kept on motivating me, i barely was able to walk literally was crawling. I was amused by the amount of patience harish was having, i Knew he wanted trek faster atleast a 100 times faster(not exaggerating) He was wonderful throughtout my trek."
+                review: "This i must share. So it was my first trek ever and the place was NAAG TIBBA and had no clue the amount of difficulties i am gonna face. But was pretty excited about living in camp surrounded by big dense forest up on the hills..."
             },
         ];
         let htmlArray =[];
