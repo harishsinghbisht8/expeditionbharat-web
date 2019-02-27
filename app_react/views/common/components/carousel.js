@@ -55,7 +55,7 @@ export default class Carousel extends Component {
     }
 
     moveSlider(e, direction) {
-        const elementWidth = this.carouselItem[0].getBoundingClientRect().width + 5;
+        const elementWidth = this.carouselItem[0].getBoundingClientRect().width + 15;
         const slideLeft = this.state.slideLeft;
         if(direction == 'left') {
             const modulus = this.props.htmlArray.length % this.props.scrollCount ;
@@ -125,7 +125,7 @@ export default class Carousel extends Component {
 		return  (
 			<div className="c-carousel" ref={(ref) => this.carousel = ref}>
                 {this.renderHeading(this.props.heading)}
-                <div className="slider-wrapper">
+                <div className="slider-wrapper max-width-cntnr">
                     <div className="prev-nav nav-btn-cntnr u-hide" onClick={(e) => this.moveSlider(e, 'left')} ref={(ref) => this.leftNav = ref}>
                         <div className='nav-btn'></div>
                     </div>
