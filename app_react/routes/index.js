@@ -5,6 +5,6 @@ import {submitQuery} from '../controllers/submitQuery';
 const router = express.Router();
 
 router.get('/', homePageHandler);
-router.post('/submitQuery', submitQuery);
+router.post('/submit-query', submitQuery);
 
 export default router;
