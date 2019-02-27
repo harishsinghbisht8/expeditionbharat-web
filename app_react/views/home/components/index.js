@@ -1,5 +1,5 @@
 import { h, render, Component } from "preact";
-import {route} from "preact-router";
+import {route, Link} from "preact-router";
 import ReactifyCore from "reactify-core";
 import Carousel from "../../common/components/carousel";
 
@@ -25,18 +25,29 @@ export default class Home extends Component {
         );
     }
 
-    // renderCarousel() {
-    //     let htmlArray =[];
-    //     for(let index=0; index<carouselImages; ++index) {
-    //         htmlArray.push(<img src={"/img/carousel/" + index + ".jpg"} />)
-    //     }
+    renderCarousel() {
+        let htmlArray =[];
+        for(let index=0; index<carouselImages; ++index) {
+            htmlArray.push(<Link href="/something">
+                <img src={"/img/carousel/" + index + ".jpg"} />
+                <div className="carousel-info">
+                    <div className="info-row">
+                        <div className="info-left">Nag Tibba Trek</div>
+                        <div className="info-right">&#8377;3000</div>
+                    </div>
+                    <div className="info-row">
+                        <div className="info-left">2D/1N</div>
+                    </div>
+                </div>
+            </Link>)
+        }
 
-    //     return(
-    //         <div className='carousel'>
-    //             <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Some of our trekking moments" />
-    //         </div>
-    //     );
-    // }
+        return(
+            <div className='carousel'>
+                <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Some of our trekking moments" />
+            </div>
+        );
+    }
 
     // <div className='coming-soon-banner'>
     //                 <img className='website-logo' src='/img/logo.png'/>
@@ -79,6 +90,7 @@ export default class Home extends Component {
                         </form>
                     </div>
                 </div>
+                {this.renderCarousel()}
             </div>
         );
     }

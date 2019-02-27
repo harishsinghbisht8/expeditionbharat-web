@@ -55,7 +55,7 @@ export default class Carousel extends Component {
     }
 
     moveSlider(e, direction) {
-        const elementWidth = this.carouselItem[0].getBoundingClientRect().width + 5;
+        const elementWidth = this.carouselItem[0].getBoundingClientRect().width + 15;
         const slideLeft = this.state.slideLeft;
         if(direction == 'left') {
             const modulus = this.props.htmlArray.length % this.props.scrollCount ;
