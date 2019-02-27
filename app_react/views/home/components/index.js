@@ -89,6 +89,7 @@ export default class Home extends Component {
             <div className='home-page'>
                 {this.renderHeader()}
                 {this.renderContent()}
+                {this.renderFooter()}
                 {ReactifyCore.Utils.isBrowser ? "" : <input type="hidden" value={JSON.stringify(this.props.data)} id="dataBE" />}
             </div>
         );
