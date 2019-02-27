@@ -43,7 +43,7 @@ export default class Home extends Component {
         }
 
         return(
-            <div className='carousel'>
+            <div className='carousel max-width-cntnr'>
                 <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Some of our trekking moments" />
             </div>
         );
@@ -67,6 +67,44 @@ export default class Home extends Component {
     submitQuery() {
 
     }
+
+    renderReviews() {
+        let reviewsArray = [
+            {
+                img: "/img/reviews/tanzi.jpg",
+                name: "Tanzeem Ansari, Delhi",
+                review: "Its was life time exp during nag tibba trek , nothing could be better than this , must say very supprtive team , awesome stay , delicious food wht mre one can ask for....cheers to uh guys...keep it up !!"
+            },
+            {
+                img: "/img/reviews/tanzi.jpg",
+                name: "Abhishek Rajput, Delhi",
+                review: "To experience India in a different way"
+            },
+            {
+                img: "/img/reviews/tanzi.jpg",
+                name: "Priya Ajay, Delhi",
+                review: "This i must share. So it was my first trek ever and the place was NAAG TIBBA and had no clue the amount of difficulties i am gonna face. But was pretty excited about living in camp surrounded by big dense forest up on the hills, scary or adventurous it can be called but for me it was threatening at first . It a trek of around 8 km starting from Pantwari. I started trek in the morning with 7 other people and this guide Harry from Expedition, hardly after 200m i gueess my strength, my energy gave out :P. I knew i wont be able to do it. But this guy kept on motivating me, i barely was able to walk literally was crawling. I was amused by the amount of patience harish was having, i Knew he wanted trek faster atleast a 100 times faster(not exaggerating) He was wonderful throughtout my trek."
+            },
+        ];
+        let htmlArray =[];
+        for(let index=0; index<reviewsArray.length; ++index) {
+            let item = reviewsArray[index];
+            htmlArray.push(<div className="review">
+                <div className="user-info">
+                    <img src={item.img} />
+                    <div className="user-name">{item.name}</div>
+                </div>
+                <div className="review-text">{item.review}</div>
+            </div>)
+        }
+
+        return(
+            <div className='reviews-carousel'>
+                <Carousel scrollCount={1} defaultPosition={1} visibleElements={2} htmlArray={htmlArray} />
+            </div>
+        );
+    }
+
     renderContent() {
         return(
             <div className='page-content'>
@@ -91,6 +129,16 @@ export default class Home extends Component {
                     </div>
                 </div>
                 {this.renderCarousel()}
+                <div className="promotion-content max-width-cntnr">
+                    <div className="why-explain">
+                        <div className="promotion-heading">Why Expedition Bharat</div>
+                        <div>Expert trek leaders and team</div>
+                    </div>
+                    <div className="reviews">
+                        <div className="promotion-heading">Reviews</div>
+                        {this.renderReviews()}
+                    </div>
+                </div>
             </div>
         );
     }
