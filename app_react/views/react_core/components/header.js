@@ -32,8 +32,8 @@ export default class Header extends Component {
                             <img className="logo" alt="expeditionbharat.com" title="expeditionbharat.com" src="/img/logo.png" width={250} />
                         </Link>
                     </div>
-                    <div className={"nav-item" + (navListIndex==1 ? " list-open" : "")}>
-                        <span className="nav-title" data-index="1" onClick={this.openNavList}>
+                    <div className={"nav-item" + (navListIndex==1 ? " list-open" : "")} data-index="1" onClickCapture={this.openNavList}>
+                        <span className="nav-title">
                             treks
                             <span className={"dd-arrow" + (navListIndex==1 ? " up" : "")}></span>
                         </span>
@@ -42,8 +42,8 @@ export default class Header extends Component {
                             <li data-index="1"><Link className="dropdown-list-item" href="/trip/nag-tibba-trek">nag tibba</Link></li>
                         </ul>
                     </div>
-                    <div className={"nav-item" + (navListIndex==2 ? " list-open" : "")}>
-                        <span className="nav-title" data-index="2" onClick={this.openNavList}>
+                    <div className={"nav-item" + (navListIndex==2 ? " list-open" : "")} data-index="2" onClickCapture={this.openNavList}>
+                        <span className="nav-title">
                             rides
                             <span className={"dd-arrow" + (navListIndex==2 ? " up" : "")}></span>
                         </span>

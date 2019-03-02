@@ -12,8 +12,8 @@ export default class Trip extends Component {
 
         this.data = null;
         if(props.matches) {
-            this.tripUrl = props.matches.tripName;
-            if(props.data && props.data.tripName && props.data.tripName.toLowerCase() == this.tripUrl.split("-").join(" ").toLowerCase()) {
+            const tripUrl = props.matches.tripName;
+            if(props.data && props.data.tripName && props.data.tripName.toLowerCase() == tripUrl.split("-").join(" ").toLowerCase()) {
                 this.data = props.data;
                 this.state.loading = false;
             }
@@ -27,21 +27,33 @@ export default class Trip extends Component {
 
     componentDidMount() {
         if(!this.data) {
-            ReactifyCore.Utils.AJAX.request("/json/trip/"+this.tripUrl+".json", "GET").then((response)=>{
-                try {
-                    if(typeof response == "string") {
-                        response = JSON.parse(response);
-                    }
-                    this.data = response;
-                } catch(e) {
-                    console.log("trip json parse error", e);
-                } finally {
-                    this.setState({loading: false});
+            this.getData(this.props.matches.tripName);
+        }
+    }
+
+    getData(tripUrl) {
+        ReactifyCore.Utils.AJAX.request("/json/trip/"+tripUrl+".json", "GET").then((response)=>{
+            try {
+                if(typeof response == "string") {
+                    response = JSON.parse(response);
                 }
-            }).catch((err)=>{
-                console.log("trip json request error", err);
+                this.data = response;
+            } catch(e) {
+                console.log("trip json parse error", e);
+            } finally {
                 this.setState({loading: false});
-            })
+            }
+        }).catch((err)=>{
+            console.log("trip json request error", err);
+            this.setState({loading: false});
+        });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.matches.tripName != this.props.matches.tripName) {
+            this.data = null;
+            this.setState({loading: true});
+            this.getData(nextProps.matches.tripName);
         }
     }
 
