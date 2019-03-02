@@ -37,8 +37,8 @@ export default class Header extends Component {
                             <span className={"dd-arrow" + (navListIndex==1 ? " up" : "")}></span>
                         </span>
                         <ul className="dropdown-list">
-                            <li data-index="0"><a className="dropdown-list-item" href="/parashar">parashar</a></li>
-                            <li data-index="1"><a className="dropdown-list-item" href="/nag-tibba">nag tibba</a></li>
+                            <li data-index="0"><a className="dropdown-list-item" href="/trip/parashar">parashar</a></li>
+                            <li data-index="1"><a className="dropdown-list-item" href="/trip/nag-tibba-trek">nag tibba</a></li>
                         </ul>
                     </div>
                     <div className={"nav-item" + (navListIndex==2 ? " list-open" : "")}>
