@@ -62,9 +62,10 @@ export default class Trip extends Component {
             :
             data ?
             <div className='page-content'>
-                <div className="main-image">
-                    <h1>{data.tripName}</h1>
-                    <img src={data.mainImage} />
+                <div className="main-image" style={{backgroundImage:`url(${data.mainImage})`}}>
+                    <div className="max-width-cntnr">
+                        <h1>{data.tripName}</h1>
+                    </div>
                 </div>
                 <div className="max-width-cntnr">
                     
