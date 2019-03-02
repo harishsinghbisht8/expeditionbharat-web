@@ -7,6 +7,9 @@
 .trip-page {
     height: inherit;
     .page-content {
+        &>.max-width-cntnr {
+            margin-top: 20px;
+        }
         .main-image {
             height: 500px;
             background-size: cover;
@@ -19,10 +22,29 @@
 
             h1 {
                 position: absolute;
-                padding: 10px 20px;
+                padding: 5px 20px;
                 margin: 0;
                 background: rgba(255, 255, 255, 0.5);
             }
+        }
+        .trip-details {
+            width: 740px;
+            padding: 10px 10px 10px 0;
+            display: inline-block;
+            vertical-align: top;
+
+            .trip-detail-item {
+                h2 {
+
+                }
+            }
+        }
+        .trip-right-column {
+            width: 260px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: top;
+            background: #DDD;
         }
     }
     .loader-cntnr {

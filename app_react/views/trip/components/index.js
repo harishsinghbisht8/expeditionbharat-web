@@ -55,6 +55,52 @@ export default class Trip extends Component {
         );
     }
 
+    renderItemHeading(depth, heading) {
+        return(
+            depth==0?<h2>{heading}</h2>:
+            depth==1?<h3>{heading}</h3>:
+            depth==2?<h4>{heading}</h4>:
+            depth==3?<h5>{heading}</h5>:
+            <div className="detail-heading">{heading}</div>
+        );
+    }
+
+    renderItem(value, depth) {
+        depth = depth||0;
+        return(
+            <div className="trip-detail-item">
+                {value.heading ? this.renderItemHeading(depth, value.heading) : ""}
+                {value.type == "html" ?
+                    <div className="detail-value" dangerouslySetInnerHTML={{__html: value.value}}></div>
+                    :
+                    value.value.map(value=>this.renderItem(value, depth+1))
+                }
+            </div>
+        );
+    }
+
+    renderDetails() {
+        let details = this.data.details;
+        if(!details) return null;
+
+        return(
+            <div className="trip-details">
+                {details.map(value=>this.renderItem(value, 0))}
+            </div>
+        );
+    }
+
+    renderRightColumn() {
+        let rightDetails = this.data.rightDetails;
+        if(!rightDetails) return null;
+
+        return(
+            <div className="trip-right-column">
+                {rightDetails.map(value=>this.renderItem(value, 0))}
+            </div>
+        );
+    }
+
     renderContent() {
         let data = this.data;
         return(this.state.loading ?
@@ -68,7 +114,8 @@ export default class Trip extends Component {
                     </div>
                 </div>
                 <div className="max-width-cntnr">
-                    
+                    {this.renderDetails()}
+                    {this.renderRightColumn()}
                 </div>
             </div>
             :
