@@ -144,7 +144,6 @@ export default class Home extends Component {
     }
 
     render() {
-        let screen = this.state.screen;
         return (
             <div className='home-page'>
                 {this.renderHeader()}

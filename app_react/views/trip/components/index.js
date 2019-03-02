@@ -11,15 +11,14 @@ export default class Trip extends Component {
         };
 
         this.data = null;
-        if(props.tripName) {
-            this.data = props.data;
-        } else {
+        if(props.matches) {
             let tripUrl = props.matches.tripName;
             if(props.data && props.data.tripName && props.data.tripName.toLowerCase() == tripUrl.split("-").join(" ").toLowerCase()) {
                 this.data = props.data;
             }
+        } else {
+            this.data = props.data;
         }
-        
         
         [].forEach(fn => (this[fn] = this[fn].bind(this)));
     }
@@ -58,7 +57,6 @@ export default class Trip extends Component {
     }
 
     render() {
-        let screen = this.state.screen;
         return (
             <div className='trip-page'>
                 {this.renderHeader()}
