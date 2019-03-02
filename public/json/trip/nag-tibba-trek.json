@@ -1,7 +1,7 @@
 {
 	"tripName" : "NAG TIBBA TREK",
 	"type" : "trek",
-	"mainImage" : "",
+	"mainImage" : "/img/nag-tibba-trek.png",
 	"details": [
 		{
 			"heading": "overview",
@@ -44,13 +44,50 @@
 	"rightDetails" : [
 		{
 			"heading": "Basic Info",
-			"type": "html",
-			"value": ""
+			"type": "object",
+			"value": [
+				{
+					"heading": "Duration",
+					"type": "html",
+					"value": "2 Days"
+				},{
+
+					"heading": "Grade",
+					"type": "html",
+					"value": "Easy"
+				},
+				{
+					"heading": "Max Altitude",
+					"type": "html",
+					"value": "9,910 Fts"
+				},
+				{
+					"heading": "Approx Trekking Km",
+					"type": "html",
+					"value": "16 Kms"
+				}
+			]
 		},
 		{
 			"heading": "Trip Cost",
-			"type": "html",
-			"value": ""	
+			"type": "object",
+			"value": [
+				{
+					"heading": "Delhi to Delhi",
+					"type": "html",
+					"value": "Rs 5000 + 5% GST"
+				},
+				{
+					"heading": "Dehradun to Dehradun",
+					"type": "html",
+					"value": "Rs 3500 + 5% GST"
+				},
+				{
+					"heading": "Pantwari to Pantwari",
+					"type": "html",
+					"value": "Rs 2700 + 5% GST"
+				}
+			]
 		},
 		{
 			"heading": "Available Dates",
