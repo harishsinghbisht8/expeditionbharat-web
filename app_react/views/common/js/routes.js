@@ -3,10 +3,14 @@ import AsyncRoute from "preact-async-route";
 
 
 function getHomeComponent() {
-    return System.import(/* webpackChunkName : "home" */ "../../home/components/index").then(module => module.default);
+    return System.import(/* webpackChunkName : "home" */ "../../home/components/index").then(module => {
+        return module.default
+    });
 }
 function getTripComponent() {
-    return System.import(/* webpackChunkName : "trip" */ "../../trip/components/index").then(module => module.default);
+    return System.import(/* webpackChunkName : "trip" */ "../../trip/components/index").then(module => {
+        return module.default
+    });
 }
 
 export default function (dataBE) {
@@ -19,7 +23,7 @@ export default function (dataBE) {
             hashHandled={true}
             getComponent={getHomeComponent}
             data={dataBE ? JSON.parse(dataBE) : []}
-            loading={() => { return null }}
+            loading={() => { return <div>loading home...</div> }}
         />,
         <AsyncRoute
             path="/trip/:tripName"
@@ -28,8 +32,7 @@ export default function (dataBE) {
             hashHandled={false}
             getComponent={getTripComponent}
             data={dataBE ? JSON.parse(dataBE) : []}
-            loading={() => { return null }}
+            loading={() => { return <div>loading trip...</div> }}
         />
-        
     ];
 }

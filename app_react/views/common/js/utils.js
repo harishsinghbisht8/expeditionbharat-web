@@ -82,6 +82,65 @@ if (isBrowser) {
 	})("docReady", window);
 }
 
+let AJAX = {
+	request: function (url, type, map, contentType, onSuccess, onError, isJsonP, headers, preventParsing) {
+		let xhr, isCompleted;
+		let xhrPromise = new Promise((resolve, reject) => {
+			xhr = new XMLHttpRequest();
+
+		    xhr.onreadystatechange = () => {
+		        if(xhr.readyState == 4) {
+		        	isCompleted = true;
+		        	let responseData;
+					try {
+						responseData = JSON.parse(xhr.responseText);
+					} catch (e) {
+						responseData = xhr.responseText;
+					}
+					let protocol = /^([\w-]+:)\/\//.test(url) ? RegExp.$1 : window.location.protocol;
+	           		if (xhr.status >= 200 && xhr.status < 300 || 304 == xhr.status || 0 == xhr.status && "file:" == protocol) { //success case
+	       				if (typeof onSuccess === "function") {
+							onSuccess(responseData);
+						}
+						resolve(responseData);
+	           		} else { //error case
+						if (typeof onError === "function") {
+							onError(xhr, responseData);
+						}
+						reject(responseData);
+					}
+		        }
+		    };
+
+		    xhr.open(type, url, true);
+
+		    let data = null;
+			//for post and put
+			if(contentType) {
+				if(!isJsonP) xhr.setRequestHeader("Content-type", contentType);
+				if (!preventParsing) data = typeof map == "string" ? map : window.JSON.stringify(map);
+			} else if(map) {
+				data = map;
+			}
+
+			if(headers) {
+				for(let header in headers) {
+					if(headers.hasOwnProperty(header)) xhr.setRequestHeader(header, headers[header])
+				}
+			}
+			if(!isJsonP) xhr.setRequestHeader("X-Requested-With", 'XMLHttpRequest');
+
+			xhr.send(data);
+		});
+
+		xhrPromise.abort = function() {
+			if(!isCompleted) xhr.abort();
+		}
+
+		return xhrPromise;
+	},
+};
+
 let LOCAL_STORAGE = {
 	isAvailable: isLocalStorage,
 	setItem: function (key, val) {
@@ -612,6 +671,7 @@ let COOKIE = {
 
 let EB = {
 	HELPER: HELPER,
+	AJAX: AJAX,
 	COOKIE: COOKIE,
 	isBrowser: isBrowser,
 	LOCAL_STORAGE: LOCAL_STORAGE,

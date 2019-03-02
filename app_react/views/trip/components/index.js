@@ -7,26 +7,41 @@ export default class Trip extends Component {
         super(props);
         
         this.state = {
-            
+            loading: true
         };
 
         this.data = null;
-        if(props.tripName) {
-            this.data = props.data;
-        } else {
-            let tripUrl = props.matches.tripName;
-            if(props.data && props.data.tripName && props.data.tripName.toLowerCase() == tripUrl.split("-").join(" ").toLowerCase()) {
+        if(props.matches) {
+            this.tripUrl = props.matches.tripName;
+            if(props.data && props.data.tripName && props.data.tripName.toLowerCase() == this.tripUrl.split("-").join(" ").toLowerCase()) {
                 this.data = props.data;
+                this.state.loading = false;
             }
+        } else {
+            this.data = props.data;
+            this.state.loading = false;
         }
-        
         
         [].forEach(fn => (this[fn] = this[fn].bind(this)));
     }
 
     componentDidMount() {
         if(!this.data) {
-            //ReactifyCore.Utils.AJAX
+            ReactifyCore.Utils.AJAX.request("/json/trip/"+this.tripUrl+".json", "GET").then((response)=>{
+                try {
+                    if(typeof response == "string") {
+                        response = JSON.parse(response);
+                    }
+                    this.data = response;
+                } catch(e) {
+                    console.log("trip json parse error", e);
+                } finally {
+                    this.setState({loading: false});
+                }
+            }).catch((err)=>{
+                console.log("trip json request error", err);
+                this.setState({loading: false});
+            })
         }
     }
 
@@ -42,7 +57,10 @@ export default class Trip extends Component {
 
     renderContent() {
         let data = this.data;
-        return(data ?
+        return(this.state.loading ?
+            <div className="loader-cntnr"><ReactifyCore.Components.Loader /></div>
+            :
+            data ?
             <div className='page-content'>
                 <div className="main-image">
                     <h1>{data.tripName}</h1>
@@ -53,12 +71,11 @@ export default class Trip extends Component {
                 </div>
             </div>
             :
-            <div className="loader-cntnr"><ReactifyCore.Components.Loader /></div>
+            <div className="error-cntnr max-width-cntnr">Sorry no trip found</div>
         );
     }
 
     render() {
-        let screen = this.state.screen;
         return (
             <div className='trip-page'>
                 {this.renderHeader()}
