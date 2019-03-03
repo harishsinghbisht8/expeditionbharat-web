@@ -69,19 +69,31 @@ export default class Trip extends Component {
 
     renderItemHeading(depth, heading) {
         return(
-            depth==0?<h2>{heading}</h2>:
-            depth==1?<h3>{heading}</h3>:
-            depth==2?<h4>{heading}</h4>:
-            depth==3?<h5>{heading}</h5>:
-            <div className="detail-heading">{heading}</div>
+            <div className="detail-heading">
+                {
+                    depth==0?<h2>{heading}</h2>:
+                    depth==1?<h3>{heading}</h3>:
+                    depth==2?<h4>{heading}</h4>:
+                    depth==3?<h5>{heading}</h5>:
+                    heading
+                }
+            </div>
         );
     }
 
     renderItem(value, depth) {
         depth = depth||0;
+        const attr = value.attr;
+        let delimiter, subHeading;
+        if(attr) {
+            ({delimiter, subHeading} = attr);
+        }
+
         return(
-            <div className="trip-detail-item">
+            <div className={"trip-detail-item" + (delimiter ? " inline" : "")}>
                 {value.heading ? this.renderItemHeading(depth, value.heading) : ""}
+                {subHeading ? <div className="detail-sub-heading" dangerouslySetInnerHTML={{__html: subHeading}}></div> : ""}
+                {delimiter ? <div className="detail-delimiter" dangerouslySetInnerHTML={{__html: delimiter}}></div> : ""}
                 {value.type == "html" ?
                     <div className="detail-value" dangerouslySetInnerHTML={{__html: value.value}}></div>
                     :

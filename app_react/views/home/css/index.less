@@ -32,12 +32,6 @@
             padding: 10px 10px 10px 0;
             display: inline-block;
             vertical-align: top;
-
-            .trip-detail-item {
-                h2 {
-
-                }
-            }
         }
         .trip-right-column {
             width: 260px;
@@ -45,6 +39,14 @@
             display: inline-block;
             vertical-align: top;
             background: #DDD;
+        }
+        .trip-detail-item {
+            &.inline {
+                .detail-heading, .detail-delimiter, .detail-value {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
         }
     }
     .loader-cntnr {

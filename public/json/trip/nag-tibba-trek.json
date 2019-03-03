@@ -49,22 +49,34 @@
 				{
 					"heading": "Duration",
 					"type": "html",
-					"value": "2 Days"
+					"value": "2 Days",
+					"attr": {
+						"delimiter": ":"
+					}
 				},{
 
 					"heading": "Grade",
 					"type": "html",
-					"value": "Easy"
+					"value": "Easy",
+					"attr": {
+						"delimiter": ":"
+					}
 				},
 				{
 					"heading": "Max Altitude",
 					"type": "html",
-					"value": "9,910 Fts"
+					"value": "9,910 Fts",
+					"attr": {
+						"delimiter": ":"
+					}
 				},
 				{
 					"heading": "Approx Trekking Km",
 					"type": "html",
-					"value": "16 Kms"
+					"value": "16 Kms",
+					"attr": {
+						"delimiter": ":"
+					}
 				}
 			]
 		},
@@ -75,7 +87,10 @@
 				{
 					"heading": "Delhi to Delhi",
 					"type": "html",
-					"value": "Rs 5000 + 5% GST"
+					"value": "Rs 5000 + 5% GST",
+					"attr": {
+						"subHeading": "(taxi cost excluded)"
+					}
 				},
 				{
 					"heading": "Dehradun to Dehradun",
