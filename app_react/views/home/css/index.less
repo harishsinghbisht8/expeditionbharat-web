@@ -41,10 +41,40 @@
             background: #DDD;
         }
         .trip-detail-item {
+            h2, h3, h4, h5 {
+                font-weight: 600;
+            }
             &.inline {
                 .detail-heading, .detail-delimiter, .detail-value {
                     display: inline-block;
                     vertical-align: middle;
+                }
+                >.detail-heading {
+                    h2, h3, h4, h5 {
+                        margin: 0;
+                    }
+                }
+                .detail-delimiter {
+                    margin: 0 5px;
+                }
+            }
+            &.has-sub-heading {
+                >.detail-heading {
+                    h2, h3, h4, h5 {
+                        margin-bottom: 0;
+                        line-height: 20px;
+                    }
+                    .detail-sub-heading {
+                        line-height: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            &:first-child {
+                >.detail-heading {
+                    h2, h3, h4, h5 {
+                        margin-top: 0;
+                    }
                 }
             }
         }

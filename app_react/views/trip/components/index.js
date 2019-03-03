@@ -90,7 +90,7 @@ export default class Trip extends Component {
         }
 
         return(
-            <div className={"trip-detail-item" + (delimiter ? " inline" : "")}>
+            <div className={"trip-detail-item" + (delimiter ? " inline" : "") + (subHeading ? " has-sub-heading" : "")}>
                 {value.heading ? this.renderItemHeading(depth, value.heading) : ""}
                 {subHeading ? <div className="detail-sub-heading" dangerouslySetInnerHTML={{__html: subHeading}}></div> : ""}
                 {delimiter ? <div className="detail-delimiter" dangerouslySetInnerHTML={{__html: delimiter}}></div> : ""}
