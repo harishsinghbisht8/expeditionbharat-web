@@ -7,9 +7,11 @@ export default class Trip extends Component {
         super(props);
         
         this.state = {
-            loading: true
+            loading: true,
+            expandedDates: null
         };
 
+        this.noDateExpanded = true;
         this.data = null;
         if(props.matches) {
             const tripUrl = props.matches.tripName;
@@ -22,7 +24,14 @@ export default class Trip extends Component {
             this.state.loading = false;
         }
         
-        [].forEach(fn => (this[fn] = this[fn].bind(this)));
+        ["expandDates"].forEach(fn => (this[fn] = this[fn].bind(this)));
+    }
+
+    expandDates(e) {
+        let dataHeading = e.currentTarget.dataset.heading;
+        this.setState((prevState)=>{
+            return {expandedDates: prevState.expandedDates==dataHeading ? "" : dataHeading}
+        })
     }
 
     componentDidMount() {
@@ -81,23 +90,48 @@ export default class Trip extends Component {
         );
     }
 
-    renderItem(value, depth) {
+    renderDateItem(item) {
+        const {heading, value, attr} = item;
+        const expandedDates = this.state.expandedDates;
+        const expanded = expandedDates == heading || (expandedDates==null && this.noDateExpanded);
+        this.noDateExpanded = false;
+
+        return(
+            <div className={"trip-dates" + (expanded ? " expanded" : "")}>
+                <div className="trip-date-heading" data-heading={heading} onClick={this.expandDates}>
+                    {heading}
+                    <div><span className="plus">+</span><span className="minus">-</span></div>
+                </div>
+                {value.map(newItem=>{
+                    const {type, value, heading} = newItem;
+                    return(
+                        <div className="trip-date-value">
+                            <div dangerouslySetInnerHTML={{__html: heading}}></div>
+                            <div className={"trip-date-info " + type} dangerouslySetInnerHTML={{__html: value}}></div>
+                        </div>
+                    )
+                })}
+            </div>
+        );
+    }
+
+    renderItem(item, depth) {
         depth = depth||0;
-        const attr = value.attr;
+        const {heading, type, value, attr} = item;
         let delimiter, subHeading;
         if(attr) {
             ({delimiter, subHeading} = attr);
         }
 
-        return(
+        return(type == "dates" ? this.renderDateItem(item) :
             <div className={"trip-detail-item" + (delimiter ? " inline" : "") + (subHeading ? " has-sub-heading" : "")}>
-                {value.heading ? this.renderItemHeading(depth, value.heading) : ""}
+                {heading ? this.renderItemHeading(depth, heading) : ""}
                 {subHeading ? <div className="detail-sub-heading" dangerouslySetInnerHTML={{__html: subHeading}}></div> : ""}
                 {delimiter ? <div className="detail-delimiter" dangerouslySetInnerHTML={{__html: delimiter}}></div> : ""}
-                {value.type == "html" ?
-                    <div className="detail-value" dangerouslySetInnerHTML={{__html: value.value}}></div>
+                {type == "html" ?
+                    <div className="detail-value" dangerouslySetInnerHTML={{__html: value}}></div>
                     :
-                    value.value.map(value=>this.renderItem(value, depth+1))
+                    value.map(newItem=>this.renderItem(newItem, depth+1))
                 }
             </div>
         );
@@ -109,7 +143,7 @@ export default class Trip extends Component {
 
         return(
             <div className="trip-details">
-                {details.map(value=>this.renderItem(value, 0))}
+                {details.map(item=>this.renderItem(item, 0))}
             </div>
         );
     }
@@ -120,7 +154,7 @@ export default class Trip extends Component {
 
         return(
             <div className="trip-right-column">
-                {rightDetails.map(value=>this.renderItem(value, 0))}
+                {rightDetails.map(item=>this.renderItem(item, 0))}
             </div>
         );
     }
@@ -148,6 +182,7 @@ export default class Trip extends Component {
     }
 
     render() {
+        this.noDateExpanded = true;
         return (
             <div className='trip-page'>
                 {this.renderHeader()}

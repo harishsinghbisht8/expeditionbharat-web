@@ -106,11 +106,27 @@
 		},
 		{
 			"heading": "Available Dates",
-			"type": "dates",
+			"type": "object",
 			"value": [
 				{
 					"heading": "January 2019",
-					"type": "html",
+					"type": "dates",
+					"value": [
+						{
+							"type": "open",
+							"heading": "5th - 6th",
+							"value": "open"
+						},
+						{
+							"type": "full",
+							"heading": "5th - 6th",
+							"value": "full"
+						}		
+					]
+				},
+				{
+					"heading": "February 2019",
+					"type": "dates",
 					"value": [
 						{
 							"type": "open",

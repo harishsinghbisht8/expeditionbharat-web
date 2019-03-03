@@ -78,6 +78,59 @@
                 }
             }
         }
+        .trip-dates {
+            background: #FFF;
+            margin: 10px 0;
+
+            .trip-date-heading {
+                background: #CCC;
+                font-weight: 600;
+                padding: 5px 10px;
+                div {
+                    float: right;
+                }
+            }
+            .plus {
+                display: block;
+            }
+            .minus {
+                display: none;
+            }
+            .trip-date-value {
+                display: none;
+                padding: 5px 10px;
+                div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .trip-date-info {
+                    float: right;
+                    width: 60px;
+                    border-radius: 100px;
+                    padding: 2px 0;
+                    text-align: center;
+                    color: #FFF;
+                    background: red;
+
+                    &.open {
+                        background: green;
+                    }
+                }
+            }
+            &.expanded {
+                padding-bottom: 5px;
+                .plus {
+                    display: none;
+                }
+                .minus {
+                    display: block;
+                }
+                .trip-date-value {
+                    display: block;
+                }
+            }
+        }
     }
     .loader-cntnr {
         position: relative;
