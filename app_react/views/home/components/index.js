@@ -44,7 +44,7 @@ export default class Home extends Component {
 
         return(
             <div className='carousel max-width-cntnr'>
-                <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Some of our trekking moments" />
+                <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Upcoming Treks" />
             </div>
         );
     }

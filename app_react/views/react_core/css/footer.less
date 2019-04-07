@@ -2,5 +2,70 @@
 @import (reference) "text.less";
 
 footer {
-	
+	background-color: #A9A9A9;
+	.footer-cntnt {
+		.footer-left {
+		    width: 33.3%;
+		    float: left;
+		}
+		.footer-center {
+		    width: 33.3%;
+		    float: left;
+		}
+		.footer-right {
+		    width: 33.3%;
+		    float: left;
+		}
+		.footer-part-div {
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            .footer-text {
+				color: white;
+				padding-left: 10px;
+			}
+			.footer-heading {
+	        	color: white;
+	            font-size: 20px;	
+	            margin-bottom: 15px;
+	        }
+	        .footer-links {
+	        	ul {
+	        		margin-left: 0px;
+	        		li {
+	        			margin-left: 0px;
+	        		}
+	        	}
+	        	a {
+    				text-decoration: none;
+    				&:hover {
+    					color: blue;
+    				}    	
+	        	}
+	        }
+	        .contact-info {
+                    margin-bottom: 10px;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50px;
+                        margin-right: 6px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .contact-info-name {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    a {
+	    				text-decoration: none;
+	    				color: white;
+	    				&:hover {
+	    					color: blue;
+	    				}    	
+		        	}
+                }
+	    }
+	}	
 }
