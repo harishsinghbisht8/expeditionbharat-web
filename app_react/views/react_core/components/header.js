@@ -38,11 +38,11 @@ export default class Header extends Component {
                             <span className={"dd-arrow" + (navListIndex==1 ? " up" : "")}></span>
                         </span>
                         <ul className="dropdown-list">
-                            <li data-index="0"><Link className="dropdown-list-item" href="/trip/parashar">parashar</Link></li>
+                            <li data-index="0"><Link className="dropdown-list-item" href="/trip/prashar-lake-trek">prashar lake</Link></li>
                             <li data-index="1"><Link className="dropdown-list-item" href="/trip/nag-tibba-trek">nag tibba</Link></li>
-                            <li data-index="2"><Link className="dropdown-list-item" href="/trip/tunganath-chandrashila">Tunganath-Chandrashila</Link></li>
-                            <li data-index="3"><Link className="dropdown-list-item" href="/trip/hampta-pass">hampta pass</Link></li>
-                            <li data-index="3"><Link className="dropdown-list-item" href="/trip/bhrigu-lake">bhrigu-lake</Link></li>
+                            <li data-index="2"><Link className="dropdown-list-item" href="/trip/tunganath-chandrashila-trek">Tunganath-Chandrashila</Link></li>
+                            <li data-index="3"><Link className="dropdown-list-item" href="/trip/hampta-pass-trek">hampta pass</Link></li>
+                            <li data-index="3"><Link className="dropdown-list-item" href="/trip/bhrigu-lake-trek">bhrigu-lake</Link></li>
                         </ul>
                     </div>
                     <div className={"nav-item" + (navListIndex==2 ? " list-open" : "")} data-index="2" onClickCapture={this.openNavList}>

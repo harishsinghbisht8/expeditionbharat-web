@@ -36,25 +36,25 @@ export default class Home extends Component {
             price: 2300,
             duration: "2D/1N",
             image: "prashar.jpg",
-            link: "/trip/nag-tibba-trek"
+            link: "/trip/prashar-lake-trek"
         }, {
             name: "Tunganath-Chandrashila",
             price: 8000,
             duration: "4D/3N",
             image: "chandrashila.jpg",
-            link: "/trip/nag-tibba-trek"
+            link: "/trip/tunganath-chandrashila-trek"
         }, {
             name: "Hampta Paas",
             price: 7000,
             duration: "4D/3N",
             image: "hampta.jpg",
-            link: "/trip/nag-tibba-trek"
+            link: "/trip/hampta-pass-trek"
         }, {
             name: "Bhrigu Lake",
             price: 7000,
             duration: "4D/3N",
             image: "bhrigu.jpg",
-            link: "/trip/nag-tibba-trek"
+            link: "/trip/bhrigu-lake-trek"
         }]
         let htmlArray =[];
         let carouselElem;
