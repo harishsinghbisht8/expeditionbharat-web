@@ -59,13 +59,13 @@ export default class Header extends Component {
                         </ul>
                     </div>
                     <div className="nav-item">
-                        <span className="nav-title"><Link href="/gallery">gallery</Link></span>
+                        <span className="nav-title"><Link href="#">gallery</Link></span>
                     </div>
                     <div className="nav-item">
-                        <span className="nav-title"><Link href="/blogs">blogs</Link></span>
+                        <span className="nav-title"><Link href="#">blogs</Link></span>
                     </div>
                     <div className="nav-item">
-                        <span className="nav-title"><Link href="/about-us">about us</Link></span>
+                        <span className="nav-title"><Link href="#">about us</Link></span>
                     </div>
                 </div>
             </header>

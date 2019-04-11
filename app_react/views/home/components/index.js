@@ -3,7 +3,6 @@ import {route, Link} from "preact-router";
 import ReactifyCore from "reactify-core";
 import Carousel from "../../common/components/carousel";
 
-let carouselImages = 11;
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -26,17 +25,50 @@ export default class Home extends Component {
     }
 
     renderCarousel() {
+        let carouselTrips = [{
+            name: "Nag Tibba",
+            price: 2500,
+            duration: "2D/1N",
+            image: "nagtibba.jpg",
+            link: "/trip/nag-tibba-trek"
+        }, {
+            name: "Prashar Lake",
+            price: 2300,
+            duration: "2D/1N",
+            image: "prashar.jpg",
+            link: "/trip/nag-tibba-trek"
+        }, {
+            name: "Tunganath-Chandrashila",
+            price: 8000,
+            duration: "4D/3N",
+            image: "chandrashila.jpg",
+            link: "/trip/nag-tibba-trek"
+        }, {
+            name: "Hampta Paas",
+            price: 7000,
+            duration: "4D/3N",
+            image: "hampta.jpg",
+            link: "/trip/nag-tibba-trek"
+        }, {
+            name: "Bhrigu Lake",
+            price: 7000,
+            duration: "4D/3N",
+            image: "bhrigu.jpg",
+            link: "/trip/nag-tibba-trek"
+        }]
         let htmlArray =[];
-        for(let index=0; index<carouselImages; ++index) {
-            htmlArray.push(<Link href="/something">
-                <img src={"/img/carousel/" + index + ".jpg"} />
+        let carouselElem;
+        for(let index=0; index<carouselTrips.length; ++index) {
+            carouselElem = carouselTrips[index];
+            htmlArray.push(<Link href={carouselElem.link} >
+                <img className="carousel-trips-img" src={"/img/carousel/" + carouselElem.image} />
                 <div className="carousel-info">
                     <div className="info-row">
-                        <div className="info-left">Nag Tibba Trek</div>
-                        <div className="info-right">&#8377;3000</div>
+                        <div className="info-left carousel-info-name">{carouselElem.name}</div>
+                        <div className="info-right">&#8377;{carouselElem.price}</div>
                     </div>
                     <div className="info-row">
-                        <div className="info-left">2D/1N</div>
+                        <div className="info-left">{carouselElem.duration}</div>
                     </div>
                 </div>
             </Link>)
@@ -44,7 +76,7 @@ export default class Home extends Component {
 
         return(
             <div className='carousel max-width-cntnr'>
-                <Carousel scrollCount={1} defaultPosition={1} visibleElements={3} htmlArray={htmlArray} heading="Upcoming Treks" />
+                <Carousel scrollCount={1} defaultPosition={0} visibleElements={3} htmlArray={htmlArray} heading="Upcoming Treks" />
             </div>
         );
     }
@@ -64,24 +96,26 @@ export default class Home extends Component {
                     // </div>
     //             </div>
 
-    submitQuery() {
-
+    submitQuery(e) {
+        alert("Hello! I am an alert box!");
+        e.preventDefault();
+        return false;
     }
 
     renderReviews() {
         let reviewsArray = [
             {
-                img: "/img/reviews/tanzi.jpg",
+                img: "/img/reviews/dummy_profile.jpg",
                 name: "Tanzeem Ansari, Delhi",
                 review: "Its was life time exp during nag tibba trek , nothing could be better than this , must say very supprtive team , awesome stay , delicious food wht mre one can ask for....cheers to uh guys...keep it up !!"
             },
             {
-                img: "/img/reviews/tanzi.jpg",
+                img: "/img/reviews/dummy_profile.jpg",
                 name: "Abhishek Rajput, Delhi",
                 review: "To experience India in a different way"
             },
             {
-                img: "/img/reviews/tanzi.jpg",
+                img: "/img/reviews/dummy_profile.jpg",
                 name: "Priya Ajay, Delhi",
                 review: "This i must share. So it was my first trek ever and the place was NAAG TIBBA and had no clue the amount of difficulties i am gonna face. But was pretty excited about living in camp surrounded by big dense forest up on the hills..."
             },
@@ -100,7 +134,7 @@ export default class Home extends Component {
 
         return(
             <div className='reviews-carousel'>
-                <Carousel scrollCount={1} defaultPosition={1} visibleElements={2} htmlArray={htmlArray} />
+                <Carousel scrollCount={1} defaultPosition={0} visibleElements={2} htmlArray={htmlArray} />
             </div>
         );
     }
@@ -123,7 +157,7 @@ export default class Home extends Component {
                                 <textarea rows="3" name="message"></textarea>
                             </div>
                             <div className="submit-button">
-                                <ReactifyCore.Components.Button text="SUBMIT" type="submit" onClick={this.submitQuery} />
+                                <ReactifyCore.Components.Button text="SUBMIT" type="submit" onClick={this.submitQuery}/>
                             </div>
                         </form>
                     </div>
@@ -133,6 +167,9 @@ export default class Home extends Component {
                     <div className="why-explain">
                         <div className="promotion-heading">Why Expedition Bharat</div>
                         <div>Expert trek leaders and team</div>
+                        <div>Special care of hygiene</div>
+                        <div>Easy cancellation</div>
+                        <div>Customer focus servcies</div>
                     </div>
                     <div className="reviews">
                         <div className="promotion-heading">Reviews</div>
