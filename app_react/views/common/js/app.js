@@ -19,19 +19,6 @@ function renderPage() {
         contentEl,
         contentEl.lastElementChild
     );
-
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker-nm.js').then(registration => {
-                console.log('SW registered: ', registration);
-                registration.unregister().then(function(boolean) {
-                    console.log("service worker unregistered");
-                });
-            }).catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        });
-    }
 }
 
 window.docReady(() => {

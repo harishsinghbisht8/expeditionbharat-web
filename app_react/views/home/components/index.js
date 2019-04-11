@@ -97,9 +97,20 @@ export default class Home extends Component {
     //             </div>
 
     submitQuery(e) {
-        alert("Hello! I am an alert box!");
         e.preventDefault();
-        return false;
+        const formElem = e.target;
+        const queryObject = {};
+        Array.prototype.forEach.call(formElem.querySelectorAll("input"), elem=>{
+            queryObject[elem.name] = elem.value;
+        });
+        const textarea = formElem.querySelector("textarea");
+        queryObject[textarea.name] = textarea.value;
+
+        ReactifyCore.Utils.AJAX.request("/submit-query", "POST", queryObject, "application/json").then(response=>{
+            console.log("query form response", response);
+        }).catch((err)=>{
+            console.log("query form submit error", err);
+        });
     }
 
     renderReviews() {
@@ -144,7 +155,7 @@ export default class Home extends Component {
             <div className='page-content'>
                 <div className='coming-soon-banner'>
                     <div className="max-width-cntnr">
-                        <form className='query-form' action="/submit-query" method="POST">
+                        <form className='query-form' action="/submit-query" method="POST" onSubmit={this.submitQuery}>
                             <div className="query-header">Any query?</div>
                             <ReactifyCore.Components.Input label="Name" name="name" />
                             <ReactifyCore.Components.Input label="Destination" name="destination" />
@@ -157,7 +168,7 @@ export default class Home extends Component {
                                 <textarea rows="3" name="message"></textarea>
                             </div>
                             <div className="submit-button">
-                                <ReactifyCore.Components.Button text="SUBMIT" type="submit" onClick={this.submitQuery}/>
+                                <ReactifyCore.Components.Button text="SUBMIT" type="submit"/>
                             </div>
                         </form>
                     </div>
