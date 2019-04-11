@@ -1,0 +1,146 @@
+{
+	"tripName" : "NAG TIBBA",
+	"type" : "trek",
+	"mainImage" : "/img/nag-tibba-trek.png",
+	"details": [
+		{
+			"heading": "Overview",
+			"type": "object",
+			"value": [
+				{
+					"heading": "",
+					"type": "html",
+					"value": "The mountains of Garhwal come with dramatic formations and diverse geographic regions. Streams of crystal-clear rivers formed by the melting of glaciers, lush green meadows, hamlets, pine forests and rugged terrain form the varied topography of this region. But it is perhaps the mythological aspect of the Har ki Doon trek that makes this onerous journey more special. It would be a heavenly experience to trek along the “Valley of Gods”, and follow the track once beaten by Pandavas on their way to the heavens. So how closer you come to heavens is quite impossible to say, but the panorama of the gorgeous settings amid the snow clad peaks would be no less than a divine experience."
+				},
+				{
+					"heading": "About Har Ki Doon",
+					"type": "html",
+					"value": "Har ki Doon is a cradle-shaped valley in the Garhwal region of the Himalayas. The valley is clad with snow from October through March and one would hardly find anything other than alpine vegetation growing in this region.  Since this course is comparatively less vigorous, it would be a great way to begin your trekking experience with Har ki Doon trek this season. The extravagance of nature in the form of rich variety of flora and fauna is worth capturing and a high definition camera would always come handy for this purpose."
+				},
+				{
+					"heading": "Getting There",
+					"type": "html",
+					"value": "The best way to reach Dehradun is by taking an overnight train or a deluxe bus from New Delhi. The way from Dehradun to Sankri is about 210km, and takes around 11 hrs of journey . This journey would take you through Mussoorie, a scintillating hill station. It would take"
+				}
+			]
+		},
+		{
+			"heading": "itinerary",
+			"type": "object",
+			"value": [
+				{
+					"heading": "Day 1: Arrival at Sankri",
+					"type": "html",
+					"value": "Hire a shared cab or bus from Dehradun 210 Km Journey 10-11 hours drive along the mountains to Sankri. Accommodation, and food in Guest House in Sankri Village.Day one is all about a hill drive along the mountains of the Himalayas. These are several modes of transport for reaching Dehradun from New Delhi. Running seven days a week, Nanda Devi Express leaves New Delhi railway station just before midnight and arrives at Dehradun at about 6 in the morning. This overnight journey would be quite comfortable as compared to a bus ride. To reach Sankri - the base camp - before dusk is quite important so that you may have ample of time to relax and prepare yourself for the trek. So if you board a local cab at 7 am in the morning, you could expect to reach Sankri anytime between 6-7 in the evening. En route, you would pass local settlements at Nainbagh, Naugaon, Purola and Mori Naitwar.It would be important to equip yourself as per the requirements. The essentials include a pair of trek pants, basic medications, sunglasses, cap, woolen clothes etc.(download checklist for trek essentials item from "
+				},
+				{
+					"heading": "Day 2: Arrival at Sankri",
+					"type": "html",
+					"value": "Hire a shared cab or bus from Dehradun 210 Km Journey 10-11 hours drive along the mountains to Sankri. Accommodation, and food in Guest House in Sankri Village.Day one is all about a hill drive along the mountains of the Himalayas. These are several modes of transport for reaching Dehradun from New Delhi. Running seven days a week, Nanda Devi Express leaves New Delhi railway station just before midnight and arrives at Dehradun at about 6 in the morning. This overnight journey would be quite comfortable as compared to a bus ride. To reach Sankri - the base camp - before dusk is quite important so that you may have ample of time to relax and prepare yourself for the trek. So if you board a local cab at 7 am in the morning, you could expect to reach Sankri anytime between 6-7 in the evening. En route, you would pass local settlements at Nainbagh, Naugaon, Purola and Mori Naitwar.It would be important to equip yourself as per the requirements. The essentials include a pair of trek pants, basic medications, sunglasses, cap, woolen clothes etc.(download checklist for trek essentials item from "
+				}
+			]
+		}
+	],
+	"rightDetails" : [
+		{
+			"heading": "Basic Info",
+			"type": "object",
+			"value": [
+				{
+					"heading": "Duration",
+					"type": "html",
+					"value": "2 Days",
+					"attr": {
+						"delimiter": ":"
+					}
+				},{
+
+					"heading": "Grade",
+					"type": "html",
+					"value": "Easy",
+					"attr": {
+						"delimiter": ":"
+					}
+				},
+				{
+					"heading": "Max Altitude",
+					"type": "html",
+					"value": "9,910 Fts",
+					"attr": {
+						"delimiter": ":"
+					}
+				},
+				{
+					"heading": "Approx Trekking Km",
+					"type": "html",
+					"value": "16 Kms",
+					"attr": {
+						"delimiter": ":"
+					}
+				}
+			]
+		},
+		{
+			"heading": "Trip Cost",
+			"type": "object",
+			"value": [
+				{
+					"heading": "Delhi to Delhi",
+					"type": "html",
+					"value": "Rs 5000 + 5% GST",
+					"attr": {
+						"subHeading": "(taxi cost excluded)"
+					}
+				},
+				{
+					"heading": "Dehradun to Dehradun",
+					"type": "html",
+					"value": "Rs 3500 + 5% GST"
+				},
+				{
+					"heading": "Pantwari to Pantwari",
+					"type": "html",
+					"value": "Rs 2700 + 5% GST"
+				}
+			]
+		},
+		{
+			"heading": "Available Dates",
+			"type": "object",
+			"value": [
+				{
+					"heading": "January 2019",
+					"type": "dates",
+					"value": [
+						{
+							"type": "open",
+							"heading": "5th - 6th",
+							"value": "open"
+						},
+						{
+							"type": "full",
+							"heading": "5th - 6th",
+							"value": "full"
+						}		
+					]
+				},
+				{
+					"heading": "February 2019",
+					"type": "dates",
+					"value": [
+						{
+							"type": "open",
+							"heading": "5th - 6th",
+							"value": "open"
+						},
+						{
+							"type": "full",
+							"heading": "5th - 6th",
+							"value": "full"
+						}		
+					]
+				}
+			]
+		}
+	]
+}

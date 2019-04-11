@@ -1,146 +1,281 @@
 {
-	"tripName" : "NAG TIBBA TREK",
-	"type" : "trek",
-	"mainImage" : "/img/nag-tibba-trek.png",
-	"details": [
-		{
-			"heading": "overview",
-			"type": "object",
-			"value": [
-				{
-					"heading": "",
-					"type": "html",
-					"value": "The mountains of Garhwal come with dramatic formations and diverse geographic regions. Streams of crystal-clear rivers formed by the melting of glaciers, lush green meadows, hamlets, pine forests and rugged terrain form the varied topography of this region. But it is perhaps the mythological aspect of the Har ki Doon trek that makes this onerous journey more special. It would be a heavenly experience to trek along the “Valley of Gods”, and follow the track once beaten by Pandavas on their way to the heavens. So how closer you come to heavens is quite impossible to say, but the panorama of the gorgeous settings amid the snow clad peaks would be no less than a divine experience."
-				},
-				{
-					"heading": "About Har Ki Doon",
-					"type": "html",
-					"value": "Har ki Doon is a cradle-shaped valley in the Garhwal region of the Himalayas. The valley is clad with snow from October through March and one would hardly find anything other than alpine vegetation growing in this region.  Since this course is comparatively less vigorous, it would be a great way to begin your trekking experience with Har ki Doon trek this season. The extravagance of nature in the form of rich variety of flora and fauna is worth capturing and a high definition camera would always come handy for this purpose."
-				},
-				{
-					"heading": "Getting There",
-					"type": "html",
-					"value": "The best way to reach Dehradun is by taking an overnight train or a deluxe bus from New Delhi. The way from Dehradun to Sankri is about 210km, and takes around 11 hrs of journey . This journey would take you through Mussoorie, a scintillating hill station. It would take"
-				}
-			]
-		},
-		{
-			"heading": "itinerary",
-			"type": "object",
-			"value": [
-				{
-					"heading": "Day 1: Arrival at Sankri",
-					"type": "html",
-					"value": "Hire a shared cab or bus from Dehradun 210 Km Journey 10-11 hours drive along the mountains to Sankri. Accommodation, and food in Guest House in Sankri Village.Day one is all about a hill drive along the mountains of the Himalayas. These are several modes of transport for reaching Dehradun from New Delhi. Running seven days a week, Nanda Devi Express leaves New Delhi railway station just before midnight and arrives at Dehradun at about 6 in the morning. This overnight journey would be quite comfortable as compared to a bus ride. To reach Sankri - the base camp - before dusk is quite important so that you may have ample of time to relax and prepare yourself for the trek. So if you board a local cab at 7 am in the morning, you could expect to reach Sankri anytime between 6-7 in the evening. En route, you would pass local settlements at Nainbagh, Naugaon, Purola and Mori Naitwar.It would be important to equip yourself as per the requirements. The essentials include a pair of trek pants, basic medications, sunglasses, cap, woolen clothes etc.(download checklist for trek essentials item from "
-				},
-				{
-					"heading": "Day 2: Arrival at Sankri",
-					"type": "html",
-					"value": "Hire a shared cab or bus from Dehradun 210 Km Journey 10-11 hours drive along the mountains to Sankri. Accommodation, and food in Guest House in Sankri Village.Day one is all about a hill drive along the mountains of the Himalayas. These are several modes of transport for reaching Dehradun from New Delhi. Running seven days a week, Nanda Devi Express leaves New Delhi railway station just before midnight and arrives at Dehradun at about 6 in the morning. This overnight journey would be quite comfortable as compared to a bus ride. To reach Sankri - the base camp - before dusk is quite important so that you may have ample of time to relax and prepare yourself for the trek. So if you board a local cab at 7 am in the morning, you could expect to reach Sankri anytime between 6-7 in the evening. En route, you would pass local settlements at Nainbagh, Naugaon, Purola and Mori Naitwar.It would be important to equip yourself as per the requirements. The essentials include a pair of trek pants, basic medications, sunglasses, cap, woolen clothes etc.(download checklist for trek essentials item from "
-				}
-			]
-		}
-	],
-	"rightDetails" : [
-		{
-			"heading": "Basic Info",
-			"type": "object",
-			"value": [
-				{
-					"heading": "Duration",
-					"type": "html",
-					"value": "2 Days",
-					"attr": {
-						"delimiter": ":"
-					}
-				},{
-
-					"heading": "Grade",
-					"type": "html",
-					"value": "Easy",
-					"attr": {
-						"delimiter": ":"
-					}
-				},
-				{
-					"heading": "Max Altitude",
-					"type": "html",
-					"value": "9,910 Fts",
-					"attr": {
-						"delimiter": ":"
-					}
-				},
-				{
-					"heading": "Approx Trekking Km",
-					"type": "html",
-					"value": "16 Kms",
-					"attr": {
-						"delimiter": ":"
-					}
-				}
-			]
-		},
-		{
-			"heading": "Trip Cost",
-			"type": "object",
-			"value": [
-				{
-					"heading": "Delhi to Delhi",
-					"type": "html",
-					"value": "Rs 5000 + 5% GST",
-					"attr": {
-						"subHeading": "(taxi cost excluded)"
-					}
-				},
-				{
-					"heading": "Dehradun to Dehradun",
-					"type": "html",
-					"value": "Rs 3500 + 5% GST"
-				},
-				{
-					"heading": "Pantwari to Pantwari",
-					"type": "html",
-					"value": "Rs 2700 + 5% GST"
-				}
-			]
-		},
-		{
-			"heading": "Available Dates",
-			"type": "object",
-			"value": [
-				{
-					"heading": "January 2019",
-					"type": "dates",
-					"value": [
-						{
-							"type": "open",
-							"heading": "5th - 6th",
-							"value": "open"
-						},
-						{
-							"type": "full",
-							"heading": "5th - 6th",
-							"value": "full"
-						}		
-					]
-				},
-				{
-					"heading": "February 2019",
-					"type": "dates",
-					"value": [
-						{
-							"type": "open",
-							"heading": "5th - 6th",
-							"value": "open"
-						},
-						{
-							"type": "full",
-							"heading": "5th - 6th",
-							"value": "full"
-						}		
-					]
-				}
-			]
-		}
-	]
+  "tripName": "NAG TIBBA",
+  "type": "trek",
+  "mainImage": "/img/nag-tibba-trek.png",
+  "details": [
+    {
+      "heading": "Overview",
+      "type": "object",
+      "value": [
+        {
+          "heading": "",
+          "type": "html",
+          "value": "Nag Tibba Trek package is for two days starting from Dehradun after you arrive at the railway station or bus stand and from there, you will be taken to Pantwari and then to Nag Tibba Base Camp. A drive of around 85 kilometers and a trek for 4 kilometers would be needed to reach the base camp. Then waiting for you would be a completely refreshing dinner.\nNag Tibba summit is just 7 kilometers away from the base camp where you will be able to watch the never-aging beauty of some great peaks like Swargarohini, Bandarpoonch, Kedarnath, and Gangotri.Nag Tibba temple will also be covered on the second day of the trek.Then the descending route will be different from the en route one. You will need around 8 kilometers walk trek to reach Pantwari and then a drive to Dehradun which will conclude the tour with some beautiful memories to carry back with you."
+        },
+        {
+          "heading": "About the Destination",
+          "type": "html",
+          "value": "Nag Tibba trek or the trek to the Serpent’s Peak is a wonderful delight for adventure lovers from all over the world since it showcases the best serenity and exciting trekking routes through thick jungles and meadows. Nag Tibba is extensively located at a distance of about 3022 meters making it an ideal weekend getaway destination, especially for adventure trekking. Many people find this very interesting to refresh themselves from routine boring work life.Comparatively, it is a less explored trekking route near Mussoorie but with so much to witness and relish. Garhwal Himalayas are the pioneering protector of Nag Tibba and this is the highest peak in the range. The rich flora and fauna in the forests will find before reaching the peak are the main attraction that keeps trekkers come back to attend its reverberating beauty. It is an amazing option to enjoy the views of Bandarpoonch Peak, the Gangotri Peaks, Kedarnath Peak, Changabang Peaks, and the Doon Valley. Nag Tibba is a circular trek which has a different finishing point from the starting point and there is no overlap on the trails you covered once to reach the peak. A contrasting landscape will be visible while you descend down from the summit. Some quaint villages and extremely beautiful Deodar forests will welcome you warmly and they will give you the refreshing atmosphere to make your tiredness go away. The camping experience offered with this trek would be the additional essence of the trip. Once you get the feeling of staying amidst a perfect space to look at the sky and gaze at the twinkling stars, you will surely come back to relive the moment. Also, Nag Tibba trek is highly recommended for beginners or those with reasonable physical fitness."
+        },
+        {
+          "heading": "Getting There",
+          "type": "html",
+          "value": "The best way to reach Dehradun is by taking an overnight train or a deluxe bus from New Delhi. The way from Dehradun to Sankri is about 210km, and takes around 11 hrs of journey . This journey would take you through Mussoorie, a scintillating hill station. It would take"
+        }
+      ]
+    },
+    {
+      "heading": "Itinerary",
+      "type": "object",
+      "value": [
+        {
+          "heading": "Day 1 – Delhi -Dehradun – Pantwari – Nag Tibba Base camp",
+          "type": "html",
+          "value": "<ul>\n          <li>Reporting time at Dehradun Railway station is 07:00 AM.</li>\n          <li>Drive to Pantwari village via Mussoorie, Kempty.</li>\n          <li>Reach Pantwari village and start the first day of your trek to Nag Tibba Peak.</li>\n          <li>Upon arrival at Nag Tibba Peak, get served with hot lip-smacking dinner.</li>\n          <li>Overnight stay in camps surrounded by mountain peaks and serenity beauty.</li>\n          </ul>"
+        },
+        {
+          "heading": "Day 2 - Nag tibba Summit – Pantwari – Dehradun- Delhi",
+          "type": "html",
+          "value": "<ul>\n          <li>Early morning, wake up to the mesmerizing beauty and fill yourself with breakfast.</li>\n          <li>Start your trek to Nag Tibba Top (3084 Ft.)</li>\n          <li>Reach nag Tibba top, and witness the stunning views of the Himalayan peaks like Swarga-Rohini, Bandar Poonch, Kedarnath, and Gangotri.</li>\n          <li>Get served with the lunch after the trek.</li>\n          <li>Then start to descend to Pantwari village</li>\n          <li>End the journey by a drive to Dehradun/Delhi with a bagful of memories.</li>\n          </ul>"
+        }
+      ]
+    },
+    {
+      "heading": "Stays",
+      "type": "html",
+      "value": "<ul><li>Camps</li></ul>"
+    },
+    {
+      "heading": "Meals",
+      "type": "html",
+      "value": "<ul>\n      <li>1 breakfast 1 Dinner 2 Lunch</li>\n      <li>A lot of emphasis is given to nutritional needs and a menu of vegetarian dishes is prepared accordingly.</li>\n      <li>Tea/coffee will be served throughout.</li>\n      <li>Refreshments (2 refreshments maggi + soup)</li>\n      </ul>"
+    },
+    {
+      "heading": "Activity",
+      "type": "html",
+      "value": "Trekking"
+    },
+    {
+      "heading": "Other Inclusion",
+      "type": "html",
+      "value": "<ul>\n      <li>High quality trekking equipment’s (Tents, Mattress, Sleeping bags)</li>\n      <li>Camping stools Aid, Medical Kit, First Aid Kit</li>\n      <li>Forest Permits/Camping Charges</li>\n      <li>Trek guide</li>\n      <li>Bonfire</li>\n      </ul>"
+    },
+    {
+      "heading": "Transport",
+      "type": "html",
+      "value": "Toyota Innova, Mahindra Xylo, Mahindra Scorpio, Tempo Traveller and no local jeeps or similar vehicles are used except where there are short transfers from the lodge to the trek points. The transport tariff includes all driver charges, fuel, parking, toll and taxes."
+    },
+    {
+      "heading": "Things To Carry",
+      "type": "html",
+      "value": "<ul>\n      <li>A sturdy backpack (60ltrs) with a plastic or water-proof lining</li>\n      <li>High-ankle waterproof (Goretex)trekking shoes with good grip</li>\n      <li>Trekking pole or stick</li>\n      <li>Wardrobe essentials like woollen and fleece clothes, synthetic or waterproof track pants, rain-proof jackets, sunglasses, waterproof gloves, wind-proof jackets, thermal innerwear</li>\n      <li>Moisturizer, Sun Screen Lotion, Lip Balm</li>\n      <li>Personal Medicine Kit</li>\n      <li>Insulated water bottle and hydration pack (optional)</li>\n      <li>Torch / Flashlight (with extra batteries)</li>\n      <li>Extra Polythene bags</li>\n      </ul>"
+    },
+    {
+      "heading": "Clothing",
+      "type": "html",
+      "value": "<ul>\n      <li>1 pair of thermals (upper + lower)</li>\n      <li>2 pairs of Quick Dry Warm lower or Track Pants.</li>\n      <li>Full sleeves T-shirts/ Sweatshirts.</li>\n      <li>2-3 pair of socks</li>\n      <li>Undergarments. Qty - 1 for every day of trekking</li>\n      <li>1 warm/feather jacket</li>\n      <li>Gloves and head cover</li>\n      </ul>"
+    },
+    {
+      "heading": "Advisory",
+      "type": "html",
+      "value": "<ul>\n      <li>Travel in small groups</li>\n      <li>Proper waste disposal</li>\n      <li>Respect local cultures and be sensitive towards wildlife</li>\n      <li>Porter services for carrying personal belongings throughout the trek (not more than 10 kgs) are optional additions that can be availed for Rs. 800</li>\n      <li>Personal trekking gear and that can be availed at an additional cost</li>\n      <li>General precautions and steps are to be taken to initiate good acclimatization with the assistance of guides</li>\n      <li>Those suffering from an ailment or heart disease, Diabetes, breathing problems, high altitude sickness or is pregnant cannot participate in this trek</li>\n      </ul>"
+    },
+    {
+      "heading": "Cancellation Policy & Confirmation Policy",
+      "type": "html",
+      "value": "<ul>\n      <li>Cancel up to 15 days before trip start date and get full refund.</li>\n      <li>Cancel up to 10 days before trip start date and get 70% refund.</li>\n      <li>Cancel up to 7 days before trip start date and get 50% refund.</li>\n      <li>Cancel within 7 days of trip start date and the cost of the full reservation is non-refundable</li>\n      <li>The customer receives an acknowledgement via email within 24 hours of successful booking</li>\n      <li>In case the preferred slots are unavailable, an alternate schedule of the customer’s preference will be arranged and a new confirmation will be sent via email.</li>\n      </ul>"
+    },
+    {
+      "heading": "Refund Policy",
+      "type": "html",
+      "value": "<ul>\n      <li>The applicable refund amount will be processed within 5 business day</li>\n      </ul>"
+    }
+  ],
+  "rightDetails": [
+    {
+      "heading": "Basic Info",
+      "type": "object",
+      "value": [
+        {
+          "heading": "Duration",
+          "type": "html",
+          "value": "2 Days",
+          "attr": {
+            "delimiter": ":"
+          }
+        },
+        {
+          "heading": "Grade",
+          "type": "html",
+          "value": "Easy",
+          "attr": {
+            "delimiter": ":"
+          }
+        },
+        {
+          "heading": "Max Altitude",
+          "type": "html",
+          "value": "9,910 Fts",
+          "attr": {
+            "delimiter": ":"
+          }
+        },
+        {
+          "heading": "Approx Trekking Km",
+          "type": "html",
+          "value": "16 Kms",
+          "attr": {
+            "delimiter": ":"
+          }
+        },
+        {
+          "heading": "Temperature",
+          "type": "html",
+          "value": "16 to 25 degrees (days) and 8 to 16 degrees (nights) during March, 14 to 22  degrees (days) and 6 to14 degrees (nights) between September and December",
+          "attr": {
+            "delimiter": ":"
+          }
+        }
+      ]
+    },
+    {
+      "heading": "For Booking Call",
+      "type": "html",
+      "value": "<p style=\"color:red; font-weight:bolder; \">9718773296 / 8800301801</p>"
+    },
+    {
+      "heading": "Trip Cost",
+      "type": "object",
+      "value": [
+        {
+          "heading": "Delhi to Delhi",
+          "type": "html",
+          "value": "Rs 5000 + 5% GST",
+          "attr": {
+            "subHeading": "(taxi cost excluded)"
+          }
+        },
+        {
+          "heading": "Dehradun to Dehradun",
+          "type": "html",
+          "value": "Rs 3500 + 5% GST"
+        },
+        {
+          "heading": "Pantwari to Pantwari",
+          "type": "html",
+          "value": "Rs 2700 + 5% GST"
+        }
+      ]
+    },
+    {
+      "heading": "Available Dates",
+      "type": "object",
+      "value": [
+        {
+          "heading": "April 2019",
+          "type": "dates",
+          "value": [
+            {
+              "type": "open",
+              "heading": "13th - 14th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "20th - 21st",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "27th - 28th",
+              "value": "open"
+            }
+          ]
+        },
+        {
+          "heading": "May 2019",
+          "type": "dates",
+          "value": [
+            {
+              "type": "open",
+              "heading": "4th - 5th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "11th - 12th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "18th - 19th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "25th - 26th",
+              "value": "open"
+            }
+          ]
+        },
+        {
+          "heading": "June 2019",
+          "type": "dates",
+          "value": [
+            {
+              "type": "open",
+              "heading": "1st - 2nd",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "8th - 9th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "15th - 16th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "22nd - 23rd",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "29th - 30th",
+              "value": "open"
+            }
+          ]
+        },
+        {
+          "heading": "July 2019",
+          "type": "dates",
+          "value": [
+            {
+              "type": "open",
+              "heading": "6th - 7th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "13th - 14th",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "20th - 21st",
+              "value": "open"
+            },
+            {
+              "type": "open",
+              "heading": "27th - 28th",
+              "value": "open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
