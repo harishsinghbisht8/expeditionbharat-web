@@ -141,7 +141,7 @@
     {
       "heading": "For Booking Call",
       "type": "html",
-      "value": "<p style=\"color:red; font-weight:bolder; \">9718773296 / 8800301801</p>"
+      "value": "<p class=\"trip-right-highlight\">9718773296 / 8800301801</p>"
     },
     {
       "heading": "Trip Cost",
@@ -150,7 +150,7 @@
         {
           "heading": "Manali to Manali",
           "type": "html",
-          "value": "Rs 7000",
+          "value": "<p class=\"trip-right-highlight\">Rs 7000</p>",
           "attr": {
             "subHeading": "(minimum 4 members)"
           }

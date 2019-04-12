@@ -27,13 +27,13 @@ export default class Home extends Component {
     renderCarousel() {
         let carouselTrips = [{
             name: "Nag Tibba",
-            price: 2500,
+            price: 2700,
             duration: "2D/1N",
             image: "nagtibba.jpg",
             link: "/trip/nag-tibba-trek"
         }, {
             name: "Prashar Lake",
-            price: 2300,
+            price: 2500,
             duration: "2D/1N",
             image: "prashar.jpg",
             link: "/trip/prashar-lake-trek"
@@ -44,7 +44,7 @@ export default class Home extends Component {
             image: "chandrashila.jpg",
             link: "/trip/tunganath-chandrashila-trek"
         }, {
-            name: "Hampta Paas",
+            name: "Hampta Pass",
             price: 7000,
             duration: "4D/3N",
             image: "hampta.jpg",
@@ -76,7 +76,7 @@ export default class Home extends Component {
 
         return(
             <div className='carousel max-width-cntnr'>
-                <Carousel scrollCount={1} defaultPosition={0} visibleElements={3} htmlArray={htmlArray} heading="Upcoming Treks" />
+                <Carousel scrollCount={1} defaultPosition={0} visibleElements={3} htmlArray={htmlArray} heading="Upcoming Trips" />
             </div>
         );
     }

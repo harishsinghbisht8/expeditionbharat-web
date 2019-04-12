@@ -51,11 +51,8 @@ export default class Header extends Component {
                             <span className={"dd-arrow" + (navListIndex==2 ? " up" : "")}></span>
                         </span>
                         <ul className="dropdown-list">
-                            <li data-index="0"><Link className="dropdown-list-item" href="/alwar-bhangarh">alwar-bhangarh</Link></li>
-                            <li data-index="1"><Link className="dropdown-list-item" href="/leh-ladakh">leh-ladakh</Link></li>
-                            <li data-index="1"><Link className="dropdown-list-item" href="/leh-ladakh">chitkul</Link></li>
-                            <li data-index="1"><Link className="dropdown-list-item" href="/leh-ladakh">spiti valley</Link></li>
-                            <li data-index="1"><Link className="dropdown-list-item" href="/leh-ladakh">sambhar lake</Link></li>
+                            <li data-index="0"><Link className="dropdown-list-item" href="/ride/alwar-bhangarh-ride">alwar-bhangarh</Link></li>
+                            <li data-index="1"><Link className="dropdown-list-item" href="/ride/leh-ladakh-ride">leh-ladakh</Link></li>
                         </ul>
                     </div>
                     <div className="nav-item">

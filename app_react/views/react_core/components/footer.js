@@ -43,7 +43,7 @@ export default class Footer extends Component {
                                      <li class="footer-text">
                                         <div class="contact-info">
                                             <img src="/img/locationicon.png"/>
-                                            <div class="contact-info-name">H-331, H-Block, Raj Nagar-2, New Delhi-77</div>
+                                            <div class="contact-info-name">F-62, Dev Kunj, Sector -7, Dwarka, New Delhi-110077, India</div>
                                         </div>
                                      </li>
                                      <li class="footer-text">

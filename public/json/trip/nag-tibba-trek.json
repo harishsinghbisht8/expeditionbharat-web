@@ -43,7 +43,7 @@
     {
       "heading": "Meals",
       "type": "html",
-      "value": "<ul>\n      <li>1 breakfast 1 Dinner 2 Lunch</li>\n      <li>A lot of emphasis is given to nutritional needs and a menu of vegetarian dishes is prepared accordingly.</li>\n      <li>Tea/coffee will be served throughout.</li>\n      <li>Refreshments (2 refreshments maggi + soup)</li>\n      </ul>"
+      "value": "<ul>\n      <li>1 breakfast 2 Lunch 1 Dinner </li>\n      <li>A lot of emphasis is given to nutritional needs and a menu of vegetarian dishes is prepared accordingly.</li>\n      <li>Tea/coffee will be served throughout.</li>\n      <li>Refreshments (2 refreshments maggi + soup)</li>\n      </ul>"
     },
     {
       "heading": "Activity",
@@ -136,7 +136,7 @@
     {
       "heading": "For Booking Call",
       "type": "html",
-      "value": "<p style=\"color:red; font-weight:bolder; \">9718773296 / 8800301801</p>"
+      "value": "<p class=\"trip-right-highlight\">9718773296 / 8800301801</p>"
     },
     {
       "heading": "Trip Cost",
@@ -145,20 +145,20 @@
         {
           "heading": "Delhi to Delhi",
           "type": "html",
-          "value": "Rs 5000",
+          "value": "<p class=\"trip-right-highlight\">Rs 5000</p>",
           "attr": {
-            "subHeading": "(minimum 5 members)"
+            "subHeading": "(Minimum 4 members)"
           }
         },
         {
           "heading": "Dehradun to Dehradun",
           "type": "html",
-          "value": "Rs 3500"
+          "value": "<p class=\"trip-right-highlight\">Rs 3500</p>"
         },
         {
           "heading": "Pantwari to Pantwari",
           "type": "html",
-          "value": "Rs 2700"
+          "value": "<p class=\"trip-right-highlight\">Rs 2700</p>"
         }
       ]
     },

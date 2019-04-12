@@ -58,7 +58,7 @@
     {
       "heading": "Meals",
       "type": "html",
-      "value": "<ul>\n      <li>From dinner on Day 1 to Lucnh on Day 4, all meals will be arranged</li>\n\n      <li>4 small meals in the form of snacks and refreshments during coffee or tea breaks will also be provided</li>\n   \n         <li>A lot of emphasis is given to nutritional needs and a menu of vegetarian dishes is prepared accordingly.</li>\n    \n           <li>Tea/coffee will be served throughout.</li>\n   \n               \n                   </ul>"
+      "value": "<ul>\n      <li>From dinner on Day 1 to Lunch on Day 4, all meals will be arranged</li>\n\n      <li>4 small meals in the form of snacks and refreshments during coffee or tea breaks will also be provided</li>\n   \n         <li>A lot of emphasis is given to nutritional needs and a menu of vegetarian dishes is prepared accordingly.</li>\n    \n           <li>Tea/coffee will be served throughout.</li>\n   \n               \n                   </ul>"
     },
     {
       "heading": "Activity",
@@ -151,7 +151,7 @@
     {
       "heading": "For Booking Call",
       "type": "html",
-      "value": "<p style=\"color:red; font-weight:bolder; \">9718773296 / 8800301801</p>"
+      "value": "<p class=\"trip-right-highlight\">9718773296 / 8800301801</p>"
     },
     {
       "heading": "Trip Cost",
@@ -160,7 +160,7 @@
         {
           "heading": "Delhi to Delhi",
           "type": "html",
-          "value": "Rs 8000",
+          "value": "<p class=\"trip-right-highlight\">Rs 8000</p>",
           "attr": {
             "subHeading": "(minimum 5 members)"
           }
